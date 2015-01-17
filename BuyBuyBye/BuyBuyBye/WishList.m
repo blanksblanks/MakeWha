@@ -42,36 +42,38 @@ static NSString *const LIST_ARRAY = @"ListArray";
     return self;
 }
 
-//schedule a notification to appear once the expiration time has been reached
+// Schedule a notification to appear once the expiration time has been reached
 - (void)addItem:(Item *) item {
+
+    // Insert item into Azure client
+    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+    NSDictionary *object = @{ @"text" : item.name};
+    MSTable *objectTable = [client tableWithName:@"Object"];
+    [objectTable insert:object completion:^(NSDictionary *insObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"Item inserted, id: %@", [insObject objectForKey:@"id"]);
+        }
+    }];
+    
+    // Insert item into internal data
     [_list addObject:item];
-    //must do this for all custom objects that don't fit property list
+    // Must do this for all custom objects that don't fit property list
     NSData *savedData = [NSKeyedArchiver archivedDataWithRootObject:_list];
-    
-    // Example of entering into Azure - raising errors
-//    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
-//    NSDictionary *i = @{ @"text" : @"Awesome item" };
-//    MSTable *iTable = [client tableWithName:@"Item"];
-//    [iTable insert:i completion:^(NSDictionary *insertedItem, NSError *error) {
-//        if (error) {
-//            NSLog(@"Error: %@", error);
-//        } else {
-//            NSLog(@"Item inserted, id: %@", [insertedItem objectForKey:@"id"]);
-//        }
-//        
-//    }];
-    
-    // Updates LIST_ARRAY with newest _list
+    // Update LIST_ARRAY with newest _list
     [[NSUserDefaults standardUserDefaults]setObject:savedData forKey:LIST_ARRAY];
     [[NSUserDefaults standardUserDefaults]synchronize];
+    
+    // Log complete contents of list after new addition
     NSLog(@"%@", _list);
     for (Item *item in _list){
         NSLog(@"%@", item.name);
         NSLog(@"%@", item.time);
     }
-    
-    int size = [_list count];
+    int size = (int) [_list count];
     NSLog(@"there are %d objects in the array", size);
+    
 }
 
 /*
@@ -96,6 +98,7 @@ static NSString *const LIST_ARRAY = @"ListArray";
     return _list;
 }
 */
+
 - (NSMutableArray*)getList{
     return _list;
 }

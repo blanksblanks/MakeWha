@@ -75,10 +75,10 @@
 		B2A162611A6A258D00A65392 = {
 			isa = PBXGroup;
 			children = (
-				6223FC321A6AADC8000589A1 /* WindowsAzureMobileServices.framework */,
 				B2A1626C1A6A258D00A65392 /* BuyBuyBye */,
 				B2A162861A6A258D00A65392 /* BuyBuyByeTests */,
 				B2A1626B1A6A258D00A65392 /* Products */,
+				6223FC321A6AADC8000589A1 /* WindowsAzureMobileServices.framework */,
 			);
 			sourceTree = "<group>";
 		};
