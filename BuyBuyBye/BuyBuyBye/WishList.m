@@ -9,7 +9,7 @@
 #import "WishList.h"
 
 static NSString *const LIST_ARRAY = @"ListArray";
-static NSInteger CART_LIMIT = 5;
+//static NSInteger CART_LIMIT = 5;
 
 @implementation WishList {
     NSMutableArray *_list;
@@ -66,8 +66,11 @@ static NSInteger CART_LIMIT = 5;
 //            }
 //        }
 //    }
-    
-    NSLog(@"%@", self.list);
+    NSLog(@"%@", _list);
+    for (Item *item in _list){
+        NSLog(@"%@", item.name);
+        NSLog(@"%f", item.time);
+    }
 }
 
 - (NSArray *)list {
