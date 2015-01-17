@@ -10,7 +10,9 @@
 #import "WishList.h"
 #import "Item.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    UIImagePickerController *_photoController;
+}
 
 @end
 
@@ -32,6 +34,28 @@
     [self.timeSlider setValue:roundedSliderValue animated:YES];
     
     self.timeLabel.text = [NSString stringWithFormat:@"%.0f Days",roundedSliderValue];
+}
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"SEGUE_CAMERA_PICTURE"]) {
+//        UIImagePickerController *pickerController = segue.destinationViewController;
+//        pickerController.delegate = self;
+//        pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+//        pickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+//        pickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+//        [self presentViewController:pickerController animated:YES completion:nil];
+//    }
+//}
+
+- (IBAction)addPhotoButtonPressed:(id)sender {
+    _photoController = [[UIImagePickerController alloc] init];
+    _photoController.delegate = self;
+    _photoController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    _photoController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    _photoController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    [self presentViewController:_photoController animated:YES completion:^{
+        
+    }];
 }
 
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
@@ -99,5 +123,11 @@
     NSLog(@"The Current Time is %@",[dateFormatter stringFromDate:now]);
     return now;
 }
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
+    NSLog(@"I GOT A CALL BACK");
+}
+
 
 @end
