@@ -56,6 +56,11 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[[WishList sharedHelper] getList] removeObjectAtIndex:indexPath.row];
+    [tableView reloadData];
+}
 
 /*
 // Override to support conditional editing of the table view.
