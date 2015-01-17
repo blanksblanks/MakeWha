@@ -5,21 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>814AD80C-02A0-423D-A35D-80FD51B69BA5</string>
-=======
 	<string>2303125C-2533-4DE5-9A3A-E8F97288EB0F</string>
->>>>>>> 1025b98f84db146e32b9d65963461544fa5ae169
 	<key>IDESourceControlProjectName</key>
 	<string>BuyBuyBye</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9DBF161E5125F90984E284620F86167FEC6B447B</key>
-<<<<<<< HEAD
-		<string>https://github.com/blanksblanks/MakeWha.git/</string>
-=======
 		<string>https://github.com/jchen187/MakeWha.git</string>
->>>>>>> 1025b98f84db146e32b9d65963461544fa5ae169
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BuyBuyBye/BuyBuyBye.xcodeproj</string>
@@ -29,11 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-<<<<<<< HEAD
-	<string>https://github.com/blanksblanks/MakeWha.git/</string>
-=======
 	<string>https://github.com/jchen187/MakeWha.git</string>
->>>>>>> 1025b98f84db146e32b9d65963461544fa5ae169
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
