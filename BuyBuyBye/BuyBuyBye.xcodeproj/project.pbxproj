@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6223FC251A6A45FE000589A1 /* WishList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6223FC241A6A45FE000589A1 /* WishList.m */; };
 		B2A162701A6A258D00A65392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A1626F1A6A258D00A65392 /* main.m */; };
 		B2A162731A6A258D00A65392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A162721A6A258D00A65392 /* AppDelegate.m */; };
 		B2A162761A6A258D00A65392 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A162751A6A258D00A65392 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6223FC231A6A45FE000589A1 /* WishList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishList.h; sourceTree = "<group>"; };
+		6223FC241A6A45FE000589A1 /* WishList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishList.m; sourceTree = "<group>"; };
 		B2A1626A1A6A258D00A65392 /* BuyBuyBye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyBuyBye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A1626E1A6A258D00A65392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2A1626F1A6A258D00A65392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 			children = (
 				B2A162711A6A258D00A65392 /* AppDelegate.h */,
 				B2A162721A6A258D00A65392 /* AppDelegate.m */,
+				6223FC231A6A45FE000589A1 /* WishList.h */,
+				6223FC241A6A45FE000589A1 /* WishList.m */,
 				B2A162741A6A258D00A65392 /* ViewController.h */,
 				B2A162751A6A258D00A65392 /* ViewController.m */,
 				B2A162771A6A258D00A65392 /* Main.storyboard */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6223FC251A6A45FE000589A1 /* WishList.m in Sources */,
 				B2A162761A6A258D00A65392 /* ViewController.m in Sources */,
 				B2A162731A6A258D00A65392 /* AppDelegate.m in Sources */,
 				B2A162701A6A258D00A65392 /* main.m in Sources */,
@@ -412,6 +418,7 @@
 				B2A1628F1A6A258D00A65392 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2A162901A6A258D00A65392 /* Build configuration list for PBXNativeTarget "BuyBuyByeTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				B2A162921A6A258D00A65392 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

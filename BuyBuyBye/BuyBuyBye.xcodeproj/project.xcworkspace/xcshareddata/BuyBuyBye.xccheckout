@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>814AD80C-02A0-423D-A35D-80FD51B69BA5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BuyBuyBye</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9DBF161E5125F90984E284620F86167FEC6B447B</key>
+		<string>https://github.com/blanksblanks/MakeWha.git/</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BuyBuyBye/BuyBuyBye.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9DBF161E5125F90984E284620F86167FEC6B447B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/blanksblanks/MakeWha.git/</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9DBF161E5125F90984E284620F86167FEC6B447B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9DBF161E5125F90984E284620F86167FEC6B447B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MakeWha</string>
+		</dict>
+	</array>
+</dict>
+</plist>
