@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "WishList.h"
+#import "Item.h"
 
 @interface ViewController ()
 
@@ -26,5 +28,14 @@
 
 - (IBAction)button:(UIButton *)sender {
     self.textField.text = @"hi";
+}
+
+- (IBAction)fakebutton:(UIButton *)sender {
+    Item *newItem = [[Item alloc] init];
+    if (newItem) {
+        newItem.name = @"Rubber Ducky";
+        newItem.time = 48;
+        [[WishList sharedHelper] addItem:newItem];
+    }
 }
 @end

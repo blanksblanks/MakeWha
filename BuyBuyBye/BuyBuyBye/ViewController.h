@@ -14,6 +14,7 @@
 
 - (IBAction)button:(UIButton *)sender;
 
+- (IBAction)fakebutton:(UIButton *)sender;
 
 @end
 

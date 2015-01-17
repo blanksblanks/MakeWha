@@ -17,6 +17,6 @@
 
 +(id) sharedHelper;
 
-// TODO: Declare public methods and properties here
+@property (nonatomic, strong) NSMutableArray *list;
 
 @end
