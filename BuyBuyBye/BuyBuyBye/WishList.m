@@ -28,11 +28,14 @@ static NSString *const LIST_ARRAY = @"ListArray";
         if (![[NSUserDefaults standardUserDefaults]arrayForKey:LIST_ARRAY]) {
             _list = [[NSMutableArray alloc] init];
             NSLog(@"NEW ARRAY");
-            
+            [[NSUserDefaults standardUserDefaults]setObject:_list forKey:LIST_ARRAY];
         }
         else {
             _list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
             NSLog(@"USE PREVIOUS");
+            
+            int size = [_list count];
+            NSLog(@"there are %d objects in the array", size);
         }
 //        else {
 //            self.list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
@@ -72,6 +75,9 @@ static NSString *const LIST_ARRAY = @"ListArray";
         NSLog(@"%@", item.name);
         NSLog(@"%f", item.time);
     }
+    
+    int size = [_list count];
+    NSLog(@"there are %d objects in the array", size);
 }
 
 - (NSArray *)list {
