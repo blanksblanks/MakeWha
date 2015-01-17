@@ -59,7 +59,7 @@
             
             [[WishList sharedHelper] addItem:newItem];
         }
-        
+
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
         
         // Set the fire date/time

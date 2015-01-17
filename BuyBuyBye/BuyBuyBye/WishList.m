@@ -48,7 +48,18 @@ static NSString *const LIST_ARRAY = @"ListArray";
     //must do this for all custom objects that don't fit property list
     NSData *savedData = [NSKeyedArchiver archivedDataWithRootObject:_list];
     
-
+    // Example of entering into Azure - raising errors
+//    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+//    NSDictionary *i = @{ @"text" : @"Awesome item" };
+//    MSTable *iTable = [client tableWithName:@"Item"];
+//    [iTable insert:i completion:^(NSDictionary *insertedItem, NSError *error) {
+//        if (error) {
+//            NSLog(@"Error: %@", error);
+//        } else {
+//            NSLog(@"Item inserted, id: %@", [insertedItem objectForKey:@"id"]);
+//        }
+//        
+//    }];
     
     // Updates LIST_ARRAY with newest _list
     [[NSUserDefaults standardUserDefaults]setObject:savedData forKey:LIST_ARRAY];
@@ -61,8 +72,6 @@ static NSString *const LIST_ARRAY = @"ListArray";
     
     int size = [_list count];
     NSLog(@"there are %d objects in the array", size);
-    
-    
 }
 
 - (void)deleteItem:(Item *) item {

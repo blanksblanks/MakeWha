@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4ACAED7A1A6A4BF200FBB65E /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAED791A6A4BF200FBB65E /* Item.m */; };
 		6223FC251A6A45FE000589A1 /* WishList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6223FC241A6A45FE000589A1 /* WishList.m */; };
+		6223FC331A6AADC8000589A1 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6223FC321A6AADC8000589A1 /* WindowsAzureMobileServices.framework */; };
 		B2A162701A6A258D00A65392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A1626F1A6A258D00A65392 /* main.m */; };
 		B2A162731A6A258D00A65392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A162721A6A258D00A65392 /* AppDelegate.m */; };
 		B2A162761A6A258D00A65392 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A162751A6A258D00A65392 /* ViewController.m */; };
@@ -33,6 +34,7 @@
 		4ACAED791A6A4BF200FBB65E /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		6223FC231A6A45FE000589A1 /* WishList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishList.h; sourceTree = "<group>"; };
 		6223FC241A6A45FE000589A1 /* WishList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishList.m; sourceTree = "<group>"; };
+		6223FC321A6AADC8000589A1 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		B2A1626A1A6A258D00A65392 /* BuyBuyBye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyBuyBye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A1626E1A6A258D00A65392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2A1626F1A6A258D00A65392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6223FC331A6AADC8000589A1 /* WindowsAzureMobileServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +72,7 @@
 		B2A162611A6A258D00A65392 = {
 			isa = PBXGroup;
 			children = (
+				6223FC321A6AADC8000589A1 /* WindowsAzureMobileServices.framework */,
 				B2A1626C1A6A258D00A65392 /* BuyBuyBye */,
 				B2A162861A6A258D00A65392 /* BuyBuyByeTests */,
 				B2A1626B1A6A258D00A65392 /* Products */,
@@ -355,6 +359,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BuyBuyBye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +373,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BuyBuyBye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
