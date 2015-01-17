@@ -25,4 +25,8 @@
     [aCoder encodeObject:self.time forKey:@"time"];
 }
 
+- (NSString*)getName{
+    return self.name;
+}
+
 @end

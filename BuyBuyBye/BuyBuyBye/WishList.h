@@ -20,7 +20,10 @@
 
 +(id) sharedHelper;
 
-@property (strong, nonatomic, readonly) NSArray *list;
+//we dont use this
+@property (strong, nonatomic, readonly) NSMutableArray *list;
+
+- (NSMutableArray*)getList;
 
 - (void)addItem:(Item *) item;
 
