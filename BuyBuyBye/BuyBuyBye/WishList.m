@@ -7,12 +7,13 @@
 //
 
 #import "WishList.h"
-#import "Item.h"
 
 static NSString *const LIST_ARRAY = @"ListArray";
 static NSInteger CART_LIMIT = 5;
 
-@implementation WishList
+@implementation WishList {
+    NSMutableArray *_list;
+}
 
 +(id) sharedHelper {
     static WishList *sharedHelper = nil;
@@ -24,44 +25,53 @@ static NSInteger CART_LIMIT = 5;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        if (![[NSUserDefaults standardUserDefaults]objectForKey:LIST_ARRAY]) {
-            self.list = [NSMutableArray array];
-            for (int i = 0; i < CART_LIMIT; i++) {
-                Item *newItem = [[Item alloc] init];
-                if (newItem) {
-                    newItem.name = @"";
-                    newItem.time = INFINITY;
-                }
-                [self.list addObject: newItem];
-            }
-            [[NSUserDefaults standardUserDefaults]setObject:self.list forKey:LIST_ARRAY];
-        }
-        else {
-            self.list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
-        }
+        _list = [[NSMutableArray alloc] init];
+//        if (![[NSUserDefaults standardUserDefaults]objectForKey:LIST_ARRAY]) {
+//            _list = [NSMutableArray array];
+//            for (int i = 0; i < CART_LIMIT; i++) {
+//                Item *newItem = [[Item alloc] init];
+//                if (newItem) {
+//                    newItem.name = @"";
+//                    newItem.time = INFINITY;
+//                }
+//                [_list addObject: newItem];
+//            }
+//            [[NSUserDefaults standardUserDefaults]setObject:self.list forKey:LIST_ARRAY];
+//        }
+//        else {
+//            self.list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
+//        }
     }
     return self;
 }
 
-- (void)addItem:(Item*) item {
-    for (int i = 0; i < CART_LIMIT; i++) {
-        NSNumber *num=[NSNumber numberWithInteger:i];
-        Item *newItem = [[Item alloc] init];
-        if (newItem) {
-            newItem = [self.list objectAtIndex:num];
-            if (newItem.time != INFINITY) {
-                continue;
-            }
-            else {
-                [self.list addObject:[[Item alloc] init]];
-                [[NSUserDefaults standardUserDefaults]setObject:self.list forKey:LIST_ARRAY];
-                [[NSUserDefaults standardUserDefaults]synchronize];
-                break;
-            }
-        }
+- (void)addItem:(Item *) item {
+    if (_list == nil) {
+        _list = [NSMutableArray array];
     }
+    [_list addObject:item];
+//    for (int i = 0; i < CART_LIMIT; i++) {
+//        NSNumber *num=[NSNumber numberWithInteger:i];
+//        Item *newItem = [[Item alloc] init];
+//        if (newItem) {
+//            newItem = [self.list objectAtIndex:num];
+//            if (newItem.time != INFINITY) {
+//                continue;
+//            }
+//            else {
+//                [self.list addObject:[[Item alloc] init]];
+//                [[NSUserDefaults standardUserDefaults]setObject:self.list forKey:LIST_ARRAY];
+//                [[NSUserDefaults standardUserDefaults]synchronize];
+//                break;
+//            }
+//        }
+//    }
     
     NSLog(@"%@", self.list);
+}
+
+- (NSArray *)list {
+    return _list;
 }
 
 @end

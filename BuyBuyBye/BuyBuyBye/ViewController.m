@@ -35,6 +35,7 @@
     if (newItem) {
         newItem.name = @"Rubber Ducky";
         newItem.time = 48;
+        
         [[WishList sharedHelper] addItem:newItem];
     }
 }

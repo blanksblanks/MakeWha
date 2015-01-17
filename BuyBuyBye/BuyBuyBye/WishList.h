@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Item.h"
+
 
 @interface WishList : NSObject
 
@@ -17,6 +19,8 @@
 
 +(id) sharedHelper;
 
-@property (nonatomic, strong) NSMutableArray *list;
+@property (strong, nonatomic, readonly) NSArray *list;
+
+- (void)addItem:(Item *) item;
 
 @end
