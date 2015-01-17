@@ -41,7 +41,7 @@
     /*we will be calculating the expiration times by checking the system time
      against the timer expiration time*/
     NSDate *currentTime = [self getSystemTime];
-    NSTimeInterval secondsPerHour = 60 * 60;
+    NSTimeInterval secondsPerHour = 1; //set back to 3600 after demo
     NSDate *expirationTime = [currentTime dateByAddingTimeInterval:24*timeLeft*secondsPerHour];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd hh:mm:ss";
@@ -59,6 +59,24 @@
             
             [[WishList sharedHelper] addItem:newItem];
         }
+        
+        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+        
+        // Set the fire date/time
+        [localNotification setFireDate:expirationTime];
+        [localNotification setTimeZone:[NSTimeZone defaultTimeZone]];
+        
+        localNotification.applicationIconBadgeNumber=1;
+        
+        // Setup alert notification
+        [localNotification setAlertAction:@"The wait is over!"];
+        [localNotification setAlertBody:[NSString stringWithFormat:@"Do you still want %@?", nameOfItemAdded]];
+        
+        localNotification.soundName=UILocalNotificationDefaultSoundName;
+        [localNotification setHasAction:YES];
+        UIApplication *app=[UIApplication sharedApplication];
+        [app scheduleLocalNotification:localNotification];
+        
         alert = [[UIAlertView alloc] initWithTitle:@"Update" message:[NSString stringWithFormat:@"You have added %@ to the list.",nameOfItemAdded] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     }
     else {

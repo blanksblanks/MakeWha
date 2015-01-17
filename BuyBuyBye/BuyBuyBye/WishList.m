@@ -42,6 +42,7 @@ static NSString *const LIST_ARRAY = @"ListArray";
     return self;
 }
 
+//schedule a notification to appear once the expiration time has been reached
 - (void)addItem:(Item *) item {
     [_list addObject:item];
     //must do this for all custom objects that don't fit property list
@@ -60,29 +61,8 @@ static NSString *const LIST_ARRAY = @"ListArray";
     
     int size = [_list count];
     NSLog(@"there are %d objects in the array", size);
-}
-
-- (void)expired {
-    for (Item *entry in _list) {
-        Boolean expired = [self expirycheck:entry.time];
-        NSLog(@"%d", expired);
-    }
-}
-
-- (BOOL)expirycheck:(NSDate *)expiry
-{
-    NSDate* enddate = expiry;
-    NSDate* currentdate = [NSDate date];
-    NSTimeInterval distanceBetweenDates = [enddate timeIntervalSinceDate:currentdate];
-    double secondsInMinute = 60;
-    NSInteger secondsBetweenDates = distanceBetweenDates / secondsInMinute;
     
-    if (secondsBetweenDates == 0)
-        return YES;
-    else if (secondsBetweenDates < 0)
-        return YES;
-    else
-        return NO;
+    
 }
 
 - (void)deleteItem:(Item *) item {
