@@ -36,9 +36,17 @@
 
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
     NSString *nameOfItemAdded = self.textField.text;
+    float timeLeft = self.timeSlider.value*86400;
     UIAlertView *alert;
     
     if (![nameOfItemAdded isEqualToString:@""]){
+        Item *newItem = [[Item alloc] init];
+        if (newItem) {
+            newItem.name = nameOfItemAdded;
+            newItem.time = timeLeft;
+            
+            [[WishList sharedHelper] addItem:newItem];
+        }
         alert = [[UIAlertView alloc] initWithTitle:@"Update" message:[NSString stringWithFormat:@"You have added %@ to the list.",nameOfItemAdded] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     }
     else {
