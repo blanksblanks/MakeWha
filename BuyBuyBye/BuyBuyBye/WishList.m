@@ -74,6 +74,7 @@ static NSString *const LIST_ARRAY = @"ListArray";
     NSLog(@"there are %d objects in the array", size);
 }
 
+/*
 - (void)deleteItem:(Item *) item {
     //TODO: find the SPECIFIC item you must delete
     NSString *target = [NSString stringWithFormat:@"%@",item];
@@ -91,7 +92,11 @@ static NSString *const LIST_ARRAY = @"ListArray";
     NSLog(@"there are %d objects in the array", size);
 }
 
-- (NSArray *)list {
+- (NSMutableArray *)list {
+    return _list;
+}
+*/
+- (NSMutableArray*)getList{
     return _list;
 }
 

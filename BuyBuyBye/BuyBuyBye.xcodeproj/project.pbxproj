@@ -17,6 +17,7 @@
 		B2A1627B1A6A258D00A65392 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A1627A1A6A258D00A65392 /* Images.xcassets */; };
 		B2A1627E1A6A258D00A65392 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A1627C1A6A258D00A65392 /* LaunchScreen.xib */; };
 		B2A1628A1A6A258D00A65392 /* BuyBuyByeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A162891A6A258D00A65392 /* BuyBuyByeTests.m */; };
+		B2A162CD1A6ABD0E00A65392 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A162CC1A6ABD0E00A65392 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		B2A162831A6A258D00A65392 /* BuyBuyByeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuyBuyByeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A162881A6A258D00A65392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2A162891A6A258D00A65392 /* BuyBuyByeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyBuyByeTests.m; sourceTree = "<group>"; };
+		B2A162CB1A6ABD0E00A65392 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B2A162CC1A6ABD0E00A65392 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				B2A162741A6A258D00A65392 /* ViewController.h */,
 				B2A162751A6A258D00A65392 /* ViewController.m */,
 				B2A162771A6A258D00A65392 /* Main.storyboard */,
+				B2A162CB1A6ABD0E00A65392 /* TableViewController.h */,
+				B2A162CC1A6ABD0E00A65392 /* TableViewController.m */,
 				B2A1627A1A6A258D00A65392 /* Images.xcassets */,
 				B2A1627C1A6A258D00A65392 /* LaunchScreen.xib */,
 				B2A1626D1A6A258D00A65392 /* Supporting Files */,
@@ -234,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ACAED7A1A6A4BF200FBB65E /* Item.m in Sources */,
+				B2A162CD1A6ABD0E00A65392 /* TableViewController.m in Sources */,
 				6223FC251A6A45FE000589A1 /* WishList.m in Sources */,
 				B2A162761A6A258D00A65392 /* ViewController.m in Sources */,
 				B2A162731A6A258D00A65392 /* AppDelegate.m in Sources */,

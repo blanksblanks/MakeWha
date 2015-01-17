@@ -13,4 +13,6 @@
 @property NSString *name;
 @property NSDate *time;
 
+- (NSString*)getName;
+
 @end
