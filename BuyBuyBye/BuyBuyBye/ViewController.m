@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.timeLabel.text = [NSString stringWithFormat:@"%.0f Days",self.timeSlider.value];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,10 +28,10 @@
 }
 
 - (IBAction)timeSliderChanged:(UISlider *)sender {
-    int roundedSliderValue = lroundf(self.timeSlider.value);
+    float roundedSliderValue = lroundf(self.timeSlider.value);
     [self.timeSlider setValue:roundedSliderValue animated:YES];
     
-    self.timeLabel.text = [NSString stringWithFormat:@"%i Days",roundedSliderValue];
+    self.timeLabel.text = [NSString stringWithFormat:@"%.0f Days",roundedSliderValue];
 }
 
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
