@@ -24,6 +24,19 @@ static NSString *const LIST_ARRAY = @"ListArray";
 - (instancetype)init {
     self = [super init];
     if (self) {
+        
+        // Temporary testing: store data in mobile service
+//        MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+//        NSDictionary *item = @{ @"text" : @"Awesome item" };
+//        MSTable *itemTable = [client tableWithName:@"Item"];
+//        [itemTable insert:item completion:^(NSDictionary *insertedItem, NSError *error) {
+//            if (error) {
+//                NSLog(@"Error: %@", error);
+//            } else {
+//                NSLog(@"Item inserted, id: %@", [insertedItem objectForKey:@"id"]);
+//            }
+//        }];
+        
         if (![[NSUserDefaults standardUserDefaults]dataForKey:LIST_ARRAY]) {
             _list = [[NSMutableArray alloc] init];
             NSLog(@"NEW ARRAY");
@@ -34,7 +47,7 @@ static NSString *const LIST_ARRAY = @"ListArray";
             _list = [NSKeyedUnarchiver unarchiveObjectWithData:savedData];
             NSLog(@"USE PREVIOUS");
             
-            int size = [_list count];
+            int size = (int) [_list count];
             NSLog(@"there are %d objects in the array", size);
         }
     }
@@ -46,16 +59,16 @@ static NSString *const LIST_ARRAY = @"ListArray";
 - (void)addItem:(Item *) item {
 
     // Insert item into Azure client
-    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
-    NSDictionary *object = @{ @"text" : item.name};
-    MSTable *objectTable = [client tableWithName:@"Object"];
-    [objectTable insert:object completion:^(NSDictionary *insObject, NSError *error) {
-        if (error) {
-            NSLog(@"Error: %@", error);
-        } else {
-            NSLog(@"Item inserted, id: %@", [insObject objectForKey:@"id"]);
-        }
-    }];
+//    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+//    NSDictionary *object = @{ @"text" : item.name};
+//    MSTable *objectTable = [client tableWithName:@"Object"];
+//    [objectTable insert:object completion:^(NSDictionary *insObject, NSError *error) {
+//        if (error) {
+//            NSLog(@"Error: %@", error);
+//        } else {
+//            NSLog(@"Item inserted, id: %@", [insObject objectForKey:@"id"]);
+//        }
+//    }];
     
     // Insert item into internal data
     [_list addObject:item];
