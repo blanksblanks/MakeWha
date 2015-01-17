@@ -83,6 +83,10 @@
         alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an item name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     }
     [alert show];
+    
+    //remove the text in box after the thing shows
+    self.textField.text = @"";
+    
 
 }
 
