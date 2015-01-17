@@ -26,21 +26,12 @@ static NSString *const LIST_ARRAY = @"ListArray";
     self = [super init];
     if (self) {
         _list = [[NSMutableArray alloc] init];
-//        if (![[NSUserDefaults standardUserDefaults]objectForKey:LIST_ARRAY]) {
-//            _list = [NSMutableArray array];
-//            for (int i = 0; i < CART_LIMIT; i++) {
-//                Item *newItem = [[Item alloc] init];
-//                if (newItem) {
-//                    newItem.name = @"";
-//                    newItem.time = INFINITY;
-//                }
-//                [_list addObject: newItem];
-//            }
-//            [[NSUserDefaults standardUserDefaults]setObject:self.list forKey:LIST_ARRAY];
-//        }
 //        else {
 //            self.list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
 //        }
+    }
+    else {
+        _list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
     }
     return self;
 }
@@ -48,8 +39,12 @@ static NSString *const LIST_ARRAY = @"ListArray";
 - (void)addItem:(Item *) item {
     if (_list == nil) {
         _list = [NSMutableArray array];
+        // Loads the LIST_ARRAY (user default value retained) into _list
+        [[NSUserDefaults standardUserDefaults]setObject:_list forKey:LIST_ARRAY];
     }
     [_list addObject:item];
+    // Updates LIST_ARRAY with newest _list
+    [[NSUserDefaults standardUserDefaults]synchronize];
 //    for (int i = 0; i < CART_LIMIT; i++) {
 //        NSNumber *num=[NSNumber numberWithInteger:i];
 //        Item *newItem = [[Item alloc] init];
