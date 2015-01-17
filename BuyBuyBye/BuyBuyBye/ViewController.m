@@ -56,4 +56,5 @@
         [[WishList sharedHelper] addItem:newItem];
     }
 }
+
 @end
