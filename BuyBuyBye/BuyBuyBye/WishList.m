@@ -73,29 +73,6 @@ static NSString *const LIST_ARRAY = @"ListArray";
     NSLog(@"there are %d objects in the array", size);
 }
 
-- (void)expired {
-    for (Item *entry in _list) {
-        Boolean expired = [self expirycheck:entry.time];
-        NSLog(@"%d", expired);
-    }
-}
-
-- (BOOL)expirycheck:(NSDate *)expiry
-{
-    NSDate* enddate = expiry;
-    NSDate* currentdate = [NSDate date];
-    NSTimeInterval distanceBetweenDates = [enddate timeIntervalSinceDate:currentdate];
-    double secondsInMinute = 60;
-    NSInteger secondsBetweenDates = distanceBetweenDates / secondsInMinute;
-    
-    if (secondsBetweenDates == 0)
-        return YES;
-    else if (secondsBetweenDates < 0)
-        return YES;
-    else
-        return NO;
-}
-
 - (void)deleteItem:(Item *) item {
     //TODO: find the SPECIFIC item you must delete
     NSString *target = [NSString stringWithFormat:@"%@",item];
