@@ -25,13 +25,14 @@ static NSString *const LIST_ARRAY = @"ListArray";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        if (![[NSUserDefaults standardUserDefaults]arrayForKey:LIST_ARRAY]) {
+        if (![[NSUserDefaults standardUserDefaults]dataForKey:LIST_ARRAY]) {
             _list = [[NSMutableArray alloc] init];
             NSLog(@"NEW ARRAY");
             [[NSUserDefaults standardUserDefaults]setObject:_list forKey:LIST_ARRAY];
         }
         else {
-            _list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
+            NSData *savedData = [[NSUserDefaults standardUserDefaults]dataForKey:LIST_ARRAY];
+            _list = [NSKeyedUnarchiver unarchiveObjectWithData:savedData];
             NSLog(@"USE PREVIOUS");
             
             int size = [_list count];
@@ -52,7 +53,10 @@ static NSString *const LIST_ARRAY = @"ListArray";
         [[NSUserDefaults standardUserDefaults]setObject:_list forKey:LIST_ARRAY];
     }*/
     [_list addObject:item];
+    //must do this for all custom objects that don't fit property list
+    NSData *savedData = [NSKeyedArchiver archivedDataWithRootObject:_list];
     // Updates LIST_ARRAY with newest _list
+    [[NSUserDefaults standardUserDefaults]setObject:savedData forKey:LIST_ARRAY];
     [[NSUserDefaults standardUserDefaults]synchronize];
 //    for (int i = 0; i < CART_LIMIT; i++) {
 //        NSNumber *num=[NSNumber numberWithInteger:i];

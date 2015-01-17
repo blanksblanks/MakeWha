@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Item : NSObject
+@interface Item : NSObject <NSCoding> /*NSKeyedArchiver serializes NSCoding-compliant classes to/from data representation*/
 
 @property NSString *name;
 @property float time;
