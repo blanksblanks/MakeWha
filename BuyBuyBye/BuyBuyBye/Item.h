@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Item : NSObject <NSCoding> /*NSKeyedArchiver serializes NSCoding-compliant classes to/from data representation*/
 
 @property NSString *name;
 @property NSDate *time;
+@property UIImage *image;
 
 - (NSString*)getName;
 

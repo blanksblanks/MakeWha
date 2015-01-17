@@ -89,7 +89,7 @@ static NSString *const LIST_ARRAY = @"ListArray";
     
 }
 
-/*
+
 - (void)deleteItem:(Item *) item {
     //TODO: find the SPECIFIC item you must delete
     NSString *target = [NSString stringWithFormat:@"%@",item];
@@ -98,6 +98,12 @@ static NSString *const LIST_ARRAY = @"ListArray";
             [_list removeObject:entry];
         }
     }
+    // Must do this for all custom objects that don't fit property list
+    NSData *savedData = [NSKeyedArchiver archivedDataWithRootObject:_list];
+    // Update LIST_ARRAY with newest _list
+    [[NSUserDefaults standardUserDefaults]setObject:savedData forKey:LIST_ARRAY];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+
     for (Item *item in _list){
         NSLog(@"%@", item.name);
         NSLog(@"%@", item.time);
@@ -110,7 +116,7 @@ static NSString *const LIST_ARRAY = @"ListArray";
 - (NSMutableArray *)list {
     return _list;
 }
-*/
+
 
 - (NSMutableArray*)getList{
     return _list;

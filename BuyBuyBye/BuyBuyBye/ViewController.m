@@ -57,6 +57,10 @@
     }];
 }
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
+    NSLog(@"I GOT A CALL BACK");
+}
+
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
     NSString *nameOfItemAdded = self.textField.text;
     float timeLeft = self.timeSlider.value; //value in hours
@@ -109,8 +113,6 @@
     
     //remove the text in box after the thing shows
     self.textField.text = @"";
-    
-
 }
 
 - (NSDate *)getSystemTime {
