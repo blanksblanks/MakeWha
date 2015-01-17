@@ -9,7 +9,6 @@
 #import "WishList.h"
 
 static NSString *const LIST_ARRAY = @"ListArray";
-//static NSInteger CART_LIMIT = 5;
 
 @implementation WishList {
     NSMutableArray *_list;
@@ -38,43 +37,36 @@ static NSString *const LIST_ARRAY = @"ListArray";
             int size = [_list count];
             NSLog(@"there are %d objects in the array", size);
         }
-//        else {
-//            self.list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
-//        }
     }
    
     return self;
 }
 
 - (void)addItem:(Item *) item {
-   /* if (_list == nil) {
-        _list = [NSMutableArray array];
-        // Loads the LIST_ARRAY (user default value retained) into _list
-        [[NSUserDefaults standardUserDefaults]setObject:_list forKey:LIST_ARRAY];
-    }*/
     [_list addObject:item];
     //must do this for all custom objects that don't fit property list
     NSData *savedData = [NSKeyedArchiver archivedDataWithRootObject:_list];
     // Updates LIST_ARRAY with newest _list
     [[NSUserDefaults standardUserDefaults]setObject:savedData forKey:LIST_ARRAY];
     [[NSUserDefaults standardUserDefaults]synchronize];
-//    for (int i = 0; i < CART_LIMIT; i++) {
-//        NSNumber *num=[NSNumber numberWithInteger:i];
-//        Item *newItem = [[Item alloc] init];
-//        if (newItem) {
-//            newItem = [self.list objectAtIndex:num];
-//            if (newItem.time != INFINITY) {
-//                continue;
-//            }
-//            else {
-//                [self.list addObject:[[Item alloc] init]];
-//                [[NSUserDefaults standardUserDefaults]setObject:self.list forKey:LIST_ARRAY];
-//                [[NSUserDefaults standardUserDefaults]synchronize];
-//                break;
-//            }
-//        }
-//    }
     NSLog(@"%@", _list);
+    for (Item *item in _list){
+        NSLog(@"%@", item.name);
+        NSLog(@"%f", item.time);
+    }
+    
+    int size = [_list count];
+    NSLog(@"there are %d objects in the array", size);
+}
+
+- (void)deleteItem:(Item *) item {
+    //TODO: find the SPECIFIC item you must delete
+    NSString *target = [NSString stringWithFormat:@"%@",item];
+    for (Item *entry in _list) {
+        if ([entry.name isEqualToString:target]) {
+            [_list removeObject:entry];
+        }
+    }
     for (Item *item in _list){
         NSLog(@"%@", item.name);
         NSLog(@"%f", item.time);
