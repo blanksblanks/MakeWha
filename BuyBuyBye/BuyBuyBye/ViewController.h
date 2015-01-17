@@ -17,6 +17,7 @@
 - (IBAction)timeSliderChanged:(UISlider *)sender;
 - (IBAction)addItemButtonPressed:(UIButton *)sender;
 
+- (IBAction)fakebutton:(UIButton *)sender;
 
 @end
 

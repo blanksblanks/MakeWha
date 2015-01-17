@@ -8,8 +8,11 @@
 
 #import "WishList.h"
 
+static NSString *const LIST_ARRAY = @"ListArray";
+//static NSInteger CART_LIMIT = 5;
+
 @implementation WishList {
-    // TODO: Declare aray here
+    NSMutableArray *_list;
 }
 
 +(id) sharedHelper {
@@ -22,10 +25,63 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // TODO: Initialize array here
+        if (![[NSUserDefaults standardUserDefaults]arrayForKey:LIST_ARRAY]) {
+            _list = [[NSMutableArray alloc] init];
+            NSLog(@"NEW ARRAY");
+            [[NSUserDefaults standardUserDefaults]setObject:_list forKey:LIST_ARRAY];
+        }
+        else {
+            _list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
+            NSLog(@"USE PREVIOUS");
+            
+            int size = [_list count];
+            NSLog(@"there are %d objects in the array", size);
+        }
+//        else {
+//            self.list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
+//        }
     }
+   
     return self;
 }
 
+- (void)addItem:(Item *) item {
+   /* if (_list == nil) {
+        _list = [NSMutableArray array];
+        // Loads the LIST_ARRAY (user default value retained) into _list
+        [[NSUserDefaults standardUserDefaults]setObject:_list forKey:LIST_ARRAY];
+    }*/
+    [_list addObject:item];
+    // Updates LIST_ARRAY with newest _list
+    [[NSUserDefaults standardUserDefaults]synchronize];
+//    for (int i = 0; i < CART_LIMIT; i++) {
+//        NSNumber *num=[NSNumber numberWithInteger:i];
+//        Item *newItem = [[Item alloc] init];
+//        if (newItem) {
+//            newItem = [self.list objectAtIndex:num];
+//            if (newItem.time != INFINITY) {
+//                continue;
+//            }
+//            else {
+//                [self.list addObject:[[Item alloc] init]];
+//                [[NSUserDefaults standardUserDefaults]setObject:self.list forKey:LIST_ARRAY];
+//                [[NSUserDefaults standardUserDefaults]synchronize];
+//                break;
+//            }
+//        }
+//    }
+    NSLog(@"%@", _list);
+    for (Item *item in _list){
+        NSLog(@"%@", item.name);
+        NSLog(@"%f", item.time);
+    }
+    
+    int size = [_list count];
+    NSLog(@"there are %d objects in the array", size);
+}
+
+- (NSArray *)list {
+    return _list;
+}
 
 @end
