@@ -11,8 +11,11 @@
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITextField *textField;
+@property (strong, nonatomic) IBOutlet UISlider *timeSlider;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
-- (IBAction)button:(UIButton *)sender;
+- (IBAction)timeSliderChanged:(UISlider *)sender;
+- (IBAction)addItemButtonPressed:(UIButton *)sender;
 
 
 @end
