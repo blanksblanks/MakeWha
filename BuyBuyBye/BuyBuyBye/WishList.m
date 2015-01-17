@@ -25,23 +25,29 @@ static NSString *const LIST_ARRAY = @"ListArray";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _list = [[NSMutableArray alloc] init];
+        if (![[NSUserDefaults standardUserDefaults]arrayForKey:LIST_ARRAY]) {
+            _list = [[NSMutableArray alloc] init];
+            NSLog(@"NEW ARRAY");
+            
+        }
+        else {
+            _list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
+            NSLog(@"USE PREVIOUS");
+        }
 //        else {
 //            self.list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
 //        }
     }
-    else {
-        _list = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]arrayForKey: LIST_ARRAY]];
-    }
+   
     return self;
 }
 
 - (void)addItem:(Item *) item {
-    if (_list == nil) {
+   /* if (_list == nil) {
         _list = [NSMutableArray array];
         // Loads the LIST_ARRAY (user default value retained) into _list
         [[NSUserDefaults standardUserDefaults]setObject:_list forKey:LIST_ARRAY];
-    }
+    }*/
     [_list addObject:item];
     // Updates LIST_ARRAY with newest _list
     [[NSUserDefaults standardUserDefaults]synchronize];
