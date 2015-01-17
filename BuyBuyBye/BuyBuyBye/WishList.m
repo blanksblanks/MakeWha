@@ -46,6 +46,9 @@ static NSString *const LIST_ARRAY = @"ListArray";
     [_list addObject:item];
     //must do this for all custom objects that don't fit property list
     NSData *savedData = [NSKeyedArchiver archivedDataWithRootObject:_list];
+    
+
+    
     // Updates LIST_ARRAY with newest _list
     [[NSUserDefaults standardUserDefaults]setObject:savedData forKey:LIST_ARRAY];
     [[NSUserDefaults standardUserDefaults]synchronize];
@@ -58,6 +61,8 @@ static NSString *const LIST_ARRAY = @"ListArray";
     int size = [_list count];
     NSLog(@"there are %d objects in the array", size);
 }
+
+
 
 - (void)deleteItem:(Item *) item {
     //TODO: find the SPECIFIC item you must delete

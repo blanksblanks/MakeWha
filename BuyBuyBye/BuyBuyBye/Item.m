@@ -16,13 +16,13 @@
         return nil;
     }
     self.name = [aDecoder decodeObjectForKey:@"name"];
-    self.time = [aDecoder decodeFloatForKey:@"time"];
+    self.time = [aDecoder decodeObjectForKey:@"time"];
     return self;
 }
 
 -(void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.name forKey:@"name"];
-    [aCoder encodeFloat:self.time forKey:@"time"];
+    [aCoder encodeObject:self.time forKey:@"time"];
 }
 
 @end

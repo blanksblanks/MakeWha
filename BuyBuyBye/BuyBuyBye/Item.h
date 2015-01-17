@@ -11,6 +11,6 @@
 @interface Item : NSObject <NSCoding> /*NSKeyedArchiver serializes NSCoding-compliant classes to/from data representation*/
 
 @property NSString *name;
-@property float time;
+@property NSDate *time;
 
 @end

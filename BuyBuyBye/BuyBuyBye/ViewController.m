@@ -36,14 +36,26 @@
 
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
     NSString *nameOfItemAdded = self.textField.text;
-    float timeLeft = self.timeSlider.value*86400;
+    float timeLeft = self.timeSlider.value; //value in hours
+    
+    /*we will be calculating the expiration times by checking the system time
+     against the timer expiration time*/
+    NSDate *currentTime = [self getSystemTime];
+    NSTimeInterval secondsPerHour = 60 * 60;
+    NSDate *expirationTime = [currentTime dateByAddingTimeInterval:24*timeLeft*secondsPerHour];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd hh:mm:ss";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    
+    NSLog(@"Timer expires on %@",[dateFormatter stringFromDate:expirationTime]);
+    
     UIAlertView *alert;
     
     if (![nameOfItemAdded isEqualToString:@""]){
         Item *newItem = [[Item alloc] init];
         if (newItem) {
             newItem.name = nameOfItemAdded;
-            newItem.time = timeLeft;
+            newItem.time = expirationTime;
             
             [[WishList sharedHelper] addItem:newItem];
         }
@@ -54,6 +66,16 @@
     }
     [alert show];
 
+}
+
+- (NSDate *)getSystemTime {
+    NSDate *now = [NSDate date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yyyy-MM-dd hh:mm:ss";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    NSLog(@"The Current Time is %@",[dateFormatter stringFromDate:now]);
+    return now;
 }
 
 @end
