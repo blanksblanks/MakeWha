@@ -24,7 +24,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)button:(UIButton *)sender {
-    self.textField.text = @"hi";
+- (IBAction)addItemButtonPressed:(UIButton *)sender {
+    NSString *nameOfItemAdded = self.textField.text;
+    UIAlertView *alert;
+    
+    if (![nameOfItemAdded isEqualToString:@""]){
+        alert = [[UIAlertView alloc] initWithTitle:@"Update" message:[NSString stringWithFormat:@"You have added %@ to the list.",nameOfItemAdded] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    }
+    else {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an item name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    }
+    [alert show];
+
 }
 @end
