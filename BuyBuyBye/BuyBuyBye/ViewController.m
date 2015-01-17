@@ -24,6 +24,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)timeSliderChanged:(UISlider *)sender {
+    int roundedSliderValue = lroundf(self.timeSlider.value);
+    [self.timeSlider setValue:roundedSliderValue animated:YES];
+    
+    self.timeLabel.text = [NSString stringWithFormat:@"%i Days",roundedSliderValue];
+}
+
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
     NSString *nameOfItemAdded = self.textField.text;
     UIAlertView *alert;
