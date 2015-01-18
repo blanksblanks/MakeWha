@@ -58,7 +58,9 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[[WishList sharedHelper] getList] removeObjectAtIndex:indexPath.row];
+    //[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row];
+    [[WishList sharedHelper] deleteItem:[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row]];
+
     [tableView reloadData];
 }
 

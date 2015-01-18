@@ -26,5 +26,6 @@
 - (NSMutableArray*)getList;
 
 - (void)addItem:(Item *) item;
+- (void)deleteItem:(Item *) item;
 
 @end

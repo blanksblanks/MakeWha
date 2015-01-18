@@ -92,12 +92,16 @@ static NSString *const LIST_ARRAY = @"ListArray";
 
 - (void)deleteItem:(Item *) item {
     //TODO: find the SPECIFIC item you must delete
-    NSString *target = [NSString stringWithFormat:@"%@",item];
+    NSString *target = [NSString stringWithFormat:@"%@",item.name];
+    NSLog(@"%@", item.name);
+    id itemToDelete = nil;
     for (Item *entry in _list) {
         if ([entry.name isEqualToString:target]) {
-            [_list removeObject:entry];
+            itemToDelete = entry;
         }
     }
+    [_list removeObject:itemToDelete];
+    NSLog(@"deleting stuff");
     // Must do this for all custom objects that don't fit property list
     NSData *savedData = [NSKeyedArchiver archivedDataWithRootObject:_list];
     // Update LIST_ARRAY with newest _list
