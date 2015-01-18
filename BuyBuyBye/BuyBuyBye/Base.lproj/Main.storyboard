@@ -69,7 +69,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="BuyBuyBye" id="fEo-dg-cGu">
                         <barButtonItem key="rightBarButtonItem" title="All Items" id="zlr-Gf-5uJ">
-                            <color key="tintColor" red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="JF8-IH-P3U" kind="show" id="AQo-fA-3LU"/>
                             </connections>

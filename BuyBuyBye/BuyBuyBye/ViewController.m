@@ -45,10 +45,6 @@
         CALayer *btnLayer = [btn layer];
         [btnLayer setMasksToBounds:YES];
         [btnLayer setCornerRadius:8.0f];
-        
-        // Apply a 1 pixel, black border around Buy Button
-        [btnLayer setBorderWidth:1.0f];
-        [btnLayer setBorderColor:[[UIColor blackColor] CGColor]];
     }
 }
 
