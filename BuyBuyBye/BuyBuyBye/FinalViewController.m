@@ -15,7 +15,9 @@
 
 @end
 
-@implementation FinalViewController
+@implementation FinalViewController{
+    NSString *whatIWant;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,13 +39,21 @@
         self.Price.text = price;
         NSLog(@"JSON: %@", price);
         
+        NSString *website = [firstItem objectForKey:@"viewItemURL"];
+        NSString *needle = [[website description] componentsSeparatedByString:@"\""][1];
+        whatIWant = needle;
+        
+        NSLog(@"%@",website);
+        NSLog(@"%@",needle);
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
 }
 
 -(IBAction)websiteButton {
-    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"https://www.youtube.com"]];
+    
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@",whatIWant]]];
 }
 
 -(IBAction)exitButton {
