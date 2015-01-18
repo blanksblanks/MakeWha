@@ -22,7 +22,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self priceQuery];
     [self updateLabels];
+}
+
+-(IBAction)websiteButton {
+    
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@",whatIWant]]];
+}
+
+-(IBAction)exitButton {
+    NSLog(@"exit button recognized");
+    exit(0);
+}
+
+-(void) setTempItem:(Item *)tempItem {
+    _tempItem = tempItem;
+    [self updateLabels];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)updateLabels {
+    self.ItemName.text = self.tempItem.name;
+    self.imageView.image = self.tempItem.image;
+}
+
+- (void)priceQuery {
     [_websiteButton addTarget:self action:@selector(websiteButton) forControlEvents:UIControlEventTouchUpInside];
     [_exitButton addTarget:self action:@selector(exitButton) forControlEvents:UIControlEventTouchUpInside];
     
@@ -50,31 +79,6 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
-}
-
--(IBAction)websiteButton {
-    
-    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"%@",whatIWant]]];
-}
-
--(IBAction)exitButton {
-    NSLog(@"exit button recognized");
-    exit(0);
-}
-
--(void) setTempItem:(Item *)tempItem {
-    _tempItem = tempItem;
-    [self updateLabels];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)updateLabels {
-    self.ItemName.text = self.tempItem.name;
-    self.imageView.image = self.tempItem.image;
 }
 
 /*
