@@ -20,6 +20,7 @@
                                 <rect key="frame" x="81" y="399" width="129" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Add Item">
+                                    <color key="titleColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -39,6 +40,7 @@
                                 <rect key="frame" x="214" y="399" width="129" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -61,8 +63,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Days" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4o-u7-5wo">
                                 <rect key="frame" x="175" y="329" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.37647058820000001" green="0.21960784310000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.37647058820000001" green="0.21960784310000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.64313725490196083" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
