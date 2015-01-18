@@ -116,6 +116,17 @@ static NSString *const LIST_ARRAY = @"ListArray";
     NSLog(@"there are %d objects in the array", size);
 }
 
+- (UIImage *)getImage:(double)index {
+    int idx = 0;
+    UIImage *img;
+    for (Item *entry in _list) {
+        if (idx == index) {
+            img = entry.image;
+        }
+    }
+    return img;
+}
+
 - (NSMutableArray *)list {
     return _list;
 }

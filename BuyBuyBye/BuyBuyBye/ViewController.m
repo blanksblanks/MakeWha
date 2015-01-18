@@ -24,6 +24,32 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.timeLabel.text = [NSString stringWithFormat:@"%.0f Days",self.timeSlider.value];
     _img = [[UIImageView alloc]init];
+    
+    NSArray *buttons = [NSArray arrayWithObjects: self.addbutton, self.photobutton,nil];
+    for(UIButton *btn in buttons)
+    {
+        // Set the button Text Color
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor brownColor] forState:UIControlStateHighlighted];
+        
+        // Draw a custom gradient
+        CAGradientLayer *btnGradient = [CAGradientLayer layer];
+        btnGradient.frame = btn.bounds;
+        btnGradient.colors = [NSArray arrayWithObjects:
+                              (id)[[UIColor colorWithRed:210.0f / 255.0f green:212.0f / 255.0f blue:220.0f / 210.0f alpha:1.0f] CGColor],
+                              (id)[[UIColor colorWithRed:192.0f / 255.0f green:194.0 / 255.0f blue:206.0f / 255.0f alpha:1.0f] CGColor],
+                              nil];
+        [btn.layer insertSublayer:btnGradient atIndex:0];
+        
+        // Round button corners
+        CALayer *btnLayer = [btn layer];
+        [btnLayer setMasksToBounds:YES];
+        [btnLayer setCornerRadius:8.0f];
+        
+        // Apply a 1 pixel, black border around Buy Button
+        [btnLayer setBorderWidth:1.0f];
+        [btnLayer setBorderColor:[[UIColor blackColor] CGColor]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,7 +88,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
     [_photoController dismissViewControllerAnimated:NO completion:nil];
-    _img.image = [UIImage imageNamed:@"image"];
+    _img.image = image;
     _img.contentMode = UIViewContentModeScaleAspectFill;
     _img.clipsToBounds = YES;
     _imageView.image = image;
