@@ -14,6 +14,8 @@
 @property (strong, nonatomic) IBOutlet UISlider *timeSlider;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *img;
+@property (weak, nonatomic) IBOutlet UIButton *addbutton;
+@property (weak, nonatomic) IBOutlet UIButton *photobutton;
 
 - (IBAction)timeSliderChanged:(UISlider *)sender;
 - (IBAction)addItemButtonPressed:(UIButton *)sender;
