@@ -32,6 +32,7 @@
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor brownColor] forState:UIControlStateHighlighted];
         
+        
         // Draw a custom gradient
         CAGradientLayer *btnGradient = [CAGradientLayer layer];
         btnGradient.frame = btn.bounds;

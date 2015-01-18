@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1HI-LB-ipS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--BuyBuyBye-->
@@ -16,19 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-zV-unl">
-                                <rect key="frame" x="22" y="464" width="162" height="51"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Add Item">
-                                    <color key="titleColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addItemButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bD0-Yy-aaG"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="6fb-rg-VJa">
-                                <rect key="frame" x="85" y="381" width="210" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="6fb-rg-VJa">
+                                <rect key="frame" x="85" y="369" width="244" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="0.49803921569999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.74509803919999995" green="0.8862745098" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.69019607839999997" green="0.99215686270000003" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,44 +27,87 @@
                                     <action selector="timeSliderChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="7a4-kx-60H"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kA-tC-1AW">
-                                <rect key="frame" x="202" y="464" width="153" height="51"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Take Photo">
-                                    <color key="titleColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addPhotoButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Scu-8b-G1o"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-4Z-8XP">
-                                <rect key="frame" x="63" y="334" width="253" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Days" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4o-u7-5wo">
+                                <rect key="frame" x="180.5" y="403" width="53" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xyX-4m-EGf">
+                                <rect key="frame" x="87" y="72" width="240" height="240"/>
+                                <color key="backgroundColor" red="0.58431372549019611" green="0.89803921568627454" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Goj-3X-YZh"/>
+                                    <constraint firstAttribute="height" constant="240" id="a5T-4F-20v"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-4Z-8XP">
+                                <rect key="frame" x="87" y="320" width="240" height="30"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 Days" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4o-u7-5wo">
-                                <rect key="frame" x="157" y="415" width="66" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyX-4m-EGf">
-                                <rect key="frame" x="70" y="84" width="240" height="240"/>
-                                <color key="backgroundColor" red="0.58431372549019611" green="0.89803921568627454" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGX-Vo-FPy">
+                                <rect key="frame" x="36" y="431.5" width="342" height="91"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-zV-unl">
+                                        <rect key="frame" x="20" y="20" width="142" height="51"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="YQF-k9-rY2"/>
+                                            <constraint firstAttribute="width" constant="142" id="etU-nk-Oec"/>
+                                        </constraints>
+                                        <state key="normal" title="Add Item">
+                                            <color key="titleColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addItemButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bD0-Yy-aaG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kA-tC-1AW">
+                                        <rect key="frame" x="180" y="20" width="142" height="51"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="142" id="s76-YZ-AFy"/>
+                                        </constraints>
+                                        <state key="normal" title="Take Photo">
+                                            <color key="titleColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addPhotoButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Scu-8b-G1o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="1aT-dv-nyG"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="160" id="1bP-bC-NPw"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="160" id="Ial-Ix-wkW"/>
-                                    <constraint firstAttribute="height" constant="240" id="IrD-s2-2lI"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="160" id="NTK-9N-oA2"/>
-                                    <constraint firstAttribute="width" constant="240" id="sYz-xL-Lv1"/>
+                                    <constraint firstAttribute="trailing" secondItem="2kA-tC-1AW" secondAttribute="trailing" constant="20" id="23T-9l-5nx"/>
+                                    <constraint firstItem="dCJ-zV-unl" firstAttribute="leading" secondItem="DGX-Vo-FPy" secondAttribute="leading" constant="20" id="63b-V9-OVX"/>
+                                    <constraint firstItem="dCJ-zV-unl" firstAttribute="top" secondItem="DGX-Vo-FPy" secondAttribute="top" constant="20" id="6yJ-sg-0Ys"/>
+                                    <constraint firstItem="2kA-tC-1AW" firstAttribute="baseline" secondItem="dCJ-zV-unl" secondAttribute="firstBaseline" id="BW0-N7-cfq"/>
+                                    <constraint firstItem="2kA-tC-1AW" firstAttribute="centerY" secondItem="DGX-Vo-FPy" secondAttribute="centerY" id="USL-nJ-gIo"/>
+                                    <constraint firstItem="dCJ-zV-unl" firstAttribute="top" secondItem="2kA-tC-1AW" secondAttribute="top" id="aLX-Hs-g9p"/>
+                                    <constraint firstItem="2kA-tC-1AW" firstAttribute="leading" secondItem="dCJ-zV-unl" secondAttribute="trailing" constant="18" id="d0S-Cn-hH3"/>
+                                    <constraint firstItem="dCJ-zV-unl" firstAttribute="baseline" secondItem="2kA-tC-1AW" secondAttribute="firstBaseline" id="xb9-g4-Kjd"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.64313725490196083" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="B4o-u7-5wo" firstAttribute="top" secondItem="6fb-rg-VJa" secondAttribute="bottom" constant="4" id="1km-oh-pHM"/>
+                            <constraint firstAttribute="centerX" secondItem="Icy-4Z-8XP" secondAttribute="centerX" id="3da-Uz-dSi"/>
+                            <constraint firstAttribute="centerX" secondItem="DGX-Vo-FPy" secondAttribute="centerX" id="4QT-o3-IX7"/>
+                            <constraint firstAttribute="centerX" secondItem="B4o-u7-5wo" secondAttribute="centerX" id="9rG-df-9yP"/>
+                            <constraint firstAttribute="centerX" secondItem="6fb-rg-VJa" secondAttribute="centerX" id="BPF-g9-4D8"/>
+                            <constraint firstItem="xyX-4m-EGf" firstAttribute="width" secondItem="Icy-4Z-8XP" secondAttribute="width" id="IKl-Jc-4D6"/>
+                            <constraint firstItem="6fb-rg-VJa" firstAttribute="width" secondItem="Icy-4Z-8XP" secondAttribute="width" id="L7e-j2-gXe"/>
+                            <constraint firstItem="Icy-4Z-8XP" firstAttribute="top" secondItem="xyX-4m-EGf" secondAttribute="bottom" constant="8" id="Sd1-Av-mYO"/>
+                            <constraint firstItem="6fb-rg-VJa" firstAttribute="top" secondItem="Icy-4Z-8XP" secondAttribute="bottom" constant="19" id="UED-UH-kYY"/>
+                            <constraint firstItem="DGX-Vo-FPy" firstAttribute="top" secondItem="B4o-u7-5wo" secondAttribute="bottom" constant="8" id="nd6-CU-Ie7"/>
+                            <constraint firstItem="xyX-4m-EGf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="sOZ-SX-maG"/>
+                            <constraint firstAttribute="centerX" secondItem="xyX-4m-EGf" secondAttribute="centerX" id="xzg-ze-DxA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BuyBuyBye" id="fEo-dg-cGu">
                         <barButtonItem key="rightBarButtonItem" title="All Items" id="zlr-Gf-5uJ">
