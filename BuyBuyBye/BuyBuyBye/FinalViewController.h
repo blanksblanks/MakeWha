@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *exitButton;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+@property (weak, nonatomic) IBOutlet UIButton *webButton;
+@property (weak, nonatomic) IBOutlet UIButton *quitButton;
 
 
 @property (strong, nonatomic) Item* tempItem;
