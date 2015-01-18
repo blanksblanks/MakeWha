@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "WishList.h"
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
 
 @interface TableViewController ()
 
@@ -62,6 +63,23 @@
     [[WishList sharedHelper] deleteItem:[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row]];
 
     [tableView reloadData];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // do stuff
+    Item* i = [[[WishList sharedHelper] getList] objectAtIndex:indexPath.row];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSDictionary* paramName = @{ @"OPERATION-NAME": @"findItemsByKeywords", @"SERVICE-VERSION": @"1.0.0", @"SECURITY-APPNAME": @"MakeWha00-d9a3-45a1-9273-24390350eed",@"RESPONSE-DATA-FORMAT":@"JSON", @"REST-PAYLOAD": @"", @"keywords":i.name};
+    [manager GET:@"http://svcs.ebay.com/services/search/FindingService/v1" parameters:paramName success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+
+    
 }
 
 /*
