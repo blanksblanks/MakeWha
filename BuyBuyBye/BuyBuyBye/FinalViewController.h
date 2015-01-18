@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *websiteButton;
 @property (weak, nonatomic) IBOutlet UIButton *exitButton;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
 
