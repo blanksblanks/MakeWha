@@ -23,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.timeLabel.text = [NSString stringWithFormat:@"%.0f Days",self.timeSlider.value];
+    _img = [[UIImageView alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,7 +61,10 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
-    NSLog(@"I GOT A CALL BACK");
+    [_photoController dismissViewControllerAnimated:NO completion:nil];
+    _img.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",image]];
+    _img.contentMode = UIViewContentModeScaleAspectFill;
+    _img.clipsToBounds = YES;
 }
 
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
