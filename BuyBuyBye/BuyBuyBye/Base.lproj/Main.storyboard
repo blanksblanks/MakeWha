@@ -201,6 +201,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZr-hI-4h4">
+                                        <rect key="frame" x="46" y="207" width="46" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -210,6 +216,7 @@
                     <connections>
                         <outlet property="ItemName" destination="6tE-hV-KAM" id="arU-He-xQ5"/>
                         <outlet property="Price" destination="EQO-sd-P6u" id="vri-Ek-dtR"/>
+                        <outlet property="websiteButton" destination="KZr-hI-4h4" id="Lz6-Sn-AmS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYz-qT-cVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
