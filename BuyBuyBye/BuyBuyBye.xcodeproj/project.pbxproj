@@ -10,6 +10,12 @@
 		4ACAED7A1A6A4BF200FBB65E /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAED791A6A4BF200FBB65E /* Item.m */; };
 		6223FC251A6A45FE000589A1 /* WishList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6223FC241A6A45FE000589A1 /* WishList.m */; };
 		629EBE881A6C0120005CC733 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629EBE871A6C0120005CC733 /* Images.xcassets */; };
+		629EBE921A6C04D0005CC733 /* Canter Bold 3D.otf in Resources */ = {isa = PBXBuildFile; fileRef = 629EBE8C1A6C04D0005CC733 /* Canter Bold 3D.otf */; };
+		629EBE931A6C04D0005CC733 /* Canter Bold Shadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 629EBE8D1A6C04D0005CC733 /* Canter Bold Shadow.otf */; };
+		629EBE941A6C04D0005CC733 /* Canter Bold Strips.otf in Resources */ = {isa = PBXBuildFile; fileRef = 629EBE8E1A6C04D0005CC733 /* Canter Bold Strips.otf */; };
+		629EBE951A6C04D0005CC733 /* Canter Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 629EBE8F1A6C04D0005CC733 /* Canter Bold.otf */; };
+		629EBE961A6C04D0005CC733 /* Canter Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 629EBE901A6C04D0005CC733 /* Canter Light.otf */; };
+		629EBE971A6C04D0005CC733 /* Canter Outline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 629EBE911A6C04D0005CC733 /* Canter Outline.otf */; };
 		62B755241A6B4C5700DF4CB4 /* WindowsAzureMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B755221A6B4C5700DF4CB4 /* WindowsAzureMessaging.framework */; };
 		62B755251A6B4C5700DF4CB4 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B755231A6B4C5700DF4CB4 /* WindowsAzureMobileServices.framework */; };
 		830B3B4D1A6B6B5E00889B6B /* FinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830B3B4C1A6B6B5E00889B6B /* FinalViewController.m */; };
@@ -41,6 +47,12 @@
 		6223FC231A6A45FE000589A1 /* WishList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishList.h; sourceTree = "<group>"; };
 		6223FC241A6A45FE000589A1 /* WishList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishList.m; sourceTree = "<group>"; };
 		629EBE871A6C0120005CC733 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		629EBE8C1A6C04D0005CC733 /* Canter Bold 3D.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter Bold 3D.otf"; sourceTree = "<group>"; };
+		629EBE8D1A6C04D0005CC733 /* Canter Bold Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter Bold Shadow.otf"; sourceTree = "<group>"; };
+		629EBE8E1A6C04D0005CC733 /* Canter Bold Strips.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter Bold Strips.otf"; sourceTree = "<group>"; };
+		629EBE8F1A6C04D0005CC733 /* Canter Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter Bold.otf"; sourceTree = "<group>"; };
+		629EBE901A6C04D0005CC733 /* Canter Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter Light.otf"; sourceTree = "<group>"; };
+		629EBE911A6C04D0005CC733 /* Canter Outline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter Outline.otf"; sourceTree = "<group>"; };
 		62B755221A6B4C5700DF4CB4 /* WindowsAzureMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMessaging.framework; sourceTree = "<group>"; };
 		62B755231A6B4C5700DF4CB4 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		830B3B4B1A6B6B5E00889B6B /* FinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
@@ -91,6 +103,19 @@
 				8E943BA5ECBACC548B707EC5 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		629EBE8B1A6C04AB005CC733 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				629EBE8C1A6C04D0005CC733 /* Canter Bold 3D.otf */,
+				629EBE8D1A6C04D0005CC733 /* Canter Bold Shadow.otf */,
+				629EBE8E1A6C04D0005CC733 /* Canter Bold Strips.otf */,
+				629EBE8F1A6C04D0005CC733 /* Canter Bold.otf */,
+				629EBE901A6C04D0005CC733 /* Canter Light.otf */,
+				629EBE911A6C04D0005CC733 /* Canter Outline.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		890F6F295A2413B4D6B4E322 /* Pods */ = {
@@ -148,6 +173,7 @@
 		B2A1626D1A6A258D00A65392 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				629EBE8B1A6C04AB005CC733 /* Fonts */,
 				B2A1626E1A6A258D00A65392 /* Info.plist */,
 				B2A1626F1A6A258D00A65392 /* main.m */,
 			);
@@ -255,9 +281,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629EBE951A6C04D0005CC733 /* Canter Bold.otf in Resources */,
+				629EBE941A6C04D0005CC733 /* Canter Bold Strips.otf in Resources */,
+				629EBE971A6C04D0005CC733 /* Canter Outline.otf in Resources */,
 				629EBE881A6C0120005CC733 /* Images.xcassets in Resources */,
 				B2A162791A6A258D00A65392 /* Main.storyboard in Resources */,
+				629EBE961A6C04D0005CC733 /* Canter Light.otf in Resources */,
+				629EBE921A6C04D0005CC733 /* Canter Bold 3D.otf in Resources */,
 				B2A1627E1A6A258D00A65392 /* LaunchScreen.xib in Resources */,
+				629EBE931A6C04D0005CC733 /* Canter Bold Shadow.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
