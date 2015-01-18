@@ -62,9 +62,10 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
     [_photoController dismissViewControllerAnimated:NO completion:nil];
-    _img.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",image]];
+    _img.image = [UIImage imageNamed:@"image"];
     _img.contentMode = UIViewContentModeScaleAspectFill;
     _img.clipsToBounds = YES;
+    _imageView.image = image;
 }
 
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
@@ -89,6 +90,7 @@
         if (newItem) {
             newItem.name = nameOfItemAdded;
             newItem.time = expirationTime;
+            newItem.image = _img.image;
             
             [[WishList sharedHelper] addItem:newItem];
         }
