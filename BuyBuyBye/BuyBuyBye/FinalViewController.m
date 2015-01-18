@@ -52,8 +52,6 @@
 
 - (void)updateLabels {
     self.ItemName.text = self.tempItem.name;
-    
-
 }
 
 /*
