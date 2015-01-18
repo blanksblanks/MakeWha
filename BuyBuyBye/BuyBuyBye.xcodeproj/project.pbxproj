@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4ACAED7A1A6A4BF200FBB65E /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAED791A6A4BF200FBB65E /* Item.m */; };
 		6223FC251A6A45FE000589A1 /* WishList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6223FC241A6A45FE000589A1 /* WishList.m */; };
+		629EBE881A6C0120005CC733 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629EBE871A6C0120005CC733 /* Images.xcassets */; };
 		62B755241A6B4C5700DF4CB4 /* WindowsAzureMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B755221A6B4C5700DF4CB4 /* WindowsAzureMessaging.framework */; };
 		62B755251A6B4C5700DF4CB4 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B755231A6B4C5700DF4CB4 /* WindowsAzureMobileServices.framework */; };
 		830B3B4D1A6B6B5E00889B6B /* FinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830B3B4C1A6B6B5E00889B6B /* FinalViewController.m */; };
@@ -39,6 +40,7 @@
 		4ACAED791A6A4BF200FBB65E /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		6223FC231A6A45FE000589A1 /* WishList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishList.h; sourceTree = "<group>"; };
 		6223FC241A6A45FE000589A1 /* WishList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishList.m; sourceTree = "<group>"; };
+		629EBE871A6C0120005CC733 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		62B755221A6B4C5700DF4CB4 /* WindowsAzureMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMessaging.framework; sourceTree = "<group>"; };
 		62B755231A6B4C5700DF4CB4 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		830B3B4B1A6B6B5E00889B6B /* FinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				B2A162CB1A6ABD0E00A65392 /* TableViewController.h */,
 				B2A162CC1A6ABD0E00A65392 /* TableViewController.m */,
 				B2A1627C1A6A258D00A65392 /* LaunchScreen.xib */,
+				629EBE871A6C0120005CC733 /* Images.xcassets */,
 				B2A1626D1A6A258D00A65392 /* Supporting Files */,
 			);
 			path = BuyBuyBye;
@@ -219,10 +222,11 @@
 				TargetAttributes = {
 					B2A162691A6A258D00A65392 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = GQGXF9JDYH;
+						DevelopmentTeam = ZJ2APTZC7T;
 					};
 					B2A162821A6A258D00A65392 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = ZJ2APTZC7T;
 						TestTargetID = B2A162691A6A258D00A65392;
 					};
 				};
@@ -251,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629EBE881A6C0120005CC733 /* Images.xcassets in Resources */,
 				B2A162791A6A258D00A65392 /* Main.storyboard in Resources */,
 				B2A1627E1A6A258D00A65392 /* LaunchScreen.xib in Resources */,
 			);
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 485F22C014E41740EC3193BC /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -446,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1D93E7CEF513E52773B8A8C7 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
