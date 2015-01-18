@@ -22,6 +22,7 @@
     // Do any additional setup after loading the view.
     [self updateLabels];
     [_websiteButton addTarget:self action:@selector(websiteButton) forControlEvents:UIControlEventTouchUpInside];
+    [_exitButton addTarget:self action:@selector(exitButton) forControlEvents:UIControlEventTouchUpInside];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -43,7 +44,11 @@
 
 -(IBAction)websiteButton {
     [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"https://www.youtube.com"]];
-    
+}
+
+-(IBAction)exitButton {
+    NSLog(@"exit button recognized");
+    exit(0);
 }
 
 -(void) setTempItem:(Item *)tempItem {

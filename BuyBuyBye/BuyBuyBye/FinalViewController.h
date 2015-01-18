@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *ItemName;
 @property (strong, nonatomic) IBOutlet UILabel *Price;
 @property (weak, nonatomic) IBOutlet UIButton *websiteButton;
+@property (weak, nonatomic) IBOutlet UIButton *exitButton;
+
 
 
 
