@@ -21,6 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self updateLabels];
+    [_websiteButton addTarget:self action:@selector(websiteButton) forControlEvents:UIControlEventTouchUpInside];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -38,6 +39,11 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+}
+
+-(IBAction)websiteButton {
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"https://www.youtube.com"]];
+    
 }
 
 -(void) setTempItem:(Item *)tempItem {
