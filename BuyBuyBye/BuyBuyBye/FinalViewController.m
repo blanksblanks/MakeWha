@@ -26,6 +26,7 @@
     [_websiteButton addTarget:self action:@selector(websiteButton) forControlEvents:UIControlEventTouchUpInside];
     [_exitButton addTarget:self action:@selector(exitButton) forControlEvents:UIControlEventTouchUpInside];
     
+    // Use ebay API to do a price query
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     NSDictionary* paramName = @{ @"OPERATION-NAME": @"findItemsByKeywords", @"SERVICE-VERSION": @"1.0.0", @"SECURITY-APPNAME": @"MakeWha00-d9a3-45a1-9273-24390350eed",@"RESPONSE-DATA-FORMAT":@"JSON", @"REST-PAYLOAD": @"", @"keywords":self.tempItem.name};
@@ -73,6 +74,7 @@
 
 - (void)updateLabels {
     self.ItemName.text = self.tempItem.name;
+    self.imageView.image = self.tempItem.image;
 }
 
 /*
