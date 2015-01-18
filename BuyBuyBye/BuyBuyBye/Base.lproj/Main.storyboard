@@ -62,7 +62,7 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyX-4m-EGf">
                                 <rect key="frame" x="70" y="84" width="240" height="240"/>
-                                <color key="backgroundColor" red="0.71330440659740968" green="0.86477163386538369" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.58431372549019611" green="0.89803921568627454" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="1aT-dv-nyG"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="160" id="1bP-bC-NPw"/>
@@ -222,4 +222,5 @@
             <point key="canvasLocation" x="268" y="254"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.64313725489999995" green="0.91372549020000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>
