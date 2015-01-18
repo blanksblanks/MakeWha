@@ -48,8 +48,12 @@
                                     <action selector="addPhotoButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Scu-8b-G1o"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyX-4m-EGf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyX-4m-EGf">
                                 <rect key="frame" x="90" y="90" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IrD-s2-2lI"/>
+                                    <constraint firstAttribute="width" constant="240" id="sYz-xL-Lv1"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-4Z-8XP">
                                 <rect key="frame" x="82" y="229" width="253" height="30"/>
@@ -68,6 +72,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="imageView" destination="xyX-4m-EGf" id="1Ph-yr-KjN"/>
                         <outlet property="textField" destination="Icy-4Z-8XP" id="bTz-Ad-2dC"/>
                         <outlet property="timeLabel" destination="B4o-u7-5wo" id="ctR-9X-gvL"/>
                         <outlet property="timeSlider" destination="6fb-rg-VJa" id="Q9v-id-95k"/>
