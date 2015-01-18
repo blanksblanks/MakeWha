@@ -54,15 +54,18 @@
     // Configure the cell...
     //cell.textLabel.text = @"hi";
     cell.textLabel.text = [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName];
-    
+    Item* i = [[[WishList sharedHelper] getList] objectAtIndex:indexPath.row];
+    UIImage *image = i.image;
+    cell.imageView.image = image;
+
     return cell;
 }
+
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row];
     [[WishList sharedHelper] deleteItem:[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row]];
-
     [tableView reloadData];
 }
 

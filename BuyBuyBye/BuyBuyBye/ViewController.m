@@ -62,7 +62,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
     [_photoController dismissViewControllerAnimated:NO completion:nil];
-    _img.image = [UIImage imageNamed:@"image"];
+    _img.image = image;
     _img.contentMode = UIViewContentModeScaleAspectFill;
     _img.clipsToBounds = YES;
     _imageView.image = image;
