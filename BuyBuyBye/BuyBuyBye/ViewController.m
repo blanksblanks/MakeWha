@@ -47,6 +47,16 @@
         [btnLayer setMasksToBounds:YES];
         [btnLayer setCornerRadius:8.0f];
     }
+    
+    _textField.delegate = self;
+}
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [_textField resignFirstResponder];
+}
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning {
