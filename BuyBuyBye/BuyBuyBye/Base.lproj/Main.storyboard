@@ -6,7 +6,7 @@
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--BuyBuyBye-->
+        <!--YouDontNeedThat-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                             <constraint firstAttribute="centerX" secondItem="xyX-4m-EGf" secondAttribute="centerX" id="xzg-ze-DxA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="BuyBuyBye" id="fEo-dg-cGu">
+                    <navigationItem key="navigationItem" title="YouDontNeedThat" id="fEo-dg-cGu">
                         <barButtonItem key="rightBarButtonItem" title="All Items" id="zlr-Gf-5uJ">
                             <color key="tintColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -216,7 +216,7 @@
                                 </subviews>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-C8-sUN">
-                                <rect key="frame" x="92" y="422" width="240" height="240"/>
+                                <rect key="frame" x="84" y="53" width="98" height="7"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.64313725489999995" green="0.91372549020000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
