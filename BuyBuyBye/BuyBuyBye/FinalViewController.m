@@ -21,6 +21,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSArray *buttons = [NSArray arrayWithObjects: self.webButton, self.quitButton,nil];
+    for(UIButton *btn in buttons)
+    {
+        // Set the button Text Color
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor brownColor] forState:UIControlStateHighlighted];
+        
+        
+        // Draw a custom gradient
+        CAGradientLayer *btnGradient = [CAGradientLayer layer];
+        btnGradient.frame = btn.bounds;
+        btnGradient.colors = [NSArray arrayWithObjects:
+                              (id)[[UIColor colorWithRed:210.0f / 255.0f green:212.0f / 255.0f blue:220.0f / 210.0f alpha:1.0f] CGColor],
+                              (id)[[UIColor colorWithRed:192.0f / 255.0f green:194.0 / 255.0f blue:206.0f / 255.0f alpha:1.0f] CGColor],
+                              nil];
+        [btn.layer insertSublayer:btnGradient atIndex:0];
+        
+        // Round button corners
+        CALayer *btnLayer = [btn layer];
+        [btnLayer setMasksToBounds:YES];
+        [btnLayer setCornerRadius:8.0f];
+    }
+
+    
     // Do any additional setup after loading the view.
     [self priceQuery];
     [self updateLabels];
