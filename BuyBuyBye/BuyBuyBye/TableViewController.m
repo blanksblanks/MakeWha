@@ -53,11 +53,17 @@
     
     // Configure the cell...
     //cell.textLabel.text = @"hi";
-    cell.textLabel.text = [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName];
+    //cell.textLabel.text = [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName];
     Item* i = [[[WishList sharedHelper] getList] objectAtIndex:indexPath.row];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"E MMM dd h:mma";
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    NSString *date = [dateFormatter stringFromDate:i.time];
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@\n%@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], date];
     UIImage *image = i.image;
     cell.imageView.image = image;
-
+    
     return cell;
 }
 
