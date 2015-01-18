@@ -11,6 +11,7 @@
 		6223FC251A6A45FE000589A1 /* WishList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6223FC241A6A45FE000589A1 /* WishList.m */; };
 		62B755241A6B4C5700DF4CB4 /* WindowsAzureMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B755221A6B4C5700DF4CB4 /* WindowsAzureMessaging.framework */; };
 		62B755251A6B4C5700DF4CB4 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B755231A6B4C5700DF4CB4 /* WindowsAzureMobileServices.framework */; };
+		830B3B4D1A6B6B5E00889B6B /* FinalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830B3B4C1A6B6B5E00889B6B /* FinalViewController.m */; };
 		B2A162701A6A258D00A65392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A1626F1A6A258D00A65392 /* main.m */; };
 		B2A162731A6A258D00A65392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A162721A6A258D00A65392 /* AppDelegate.m */; };
 		B2A162761A6A258D00A65392 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A162751A6A258D00A65392 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 		6223FC241A6A45FE000589A1 /* WishList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishList.m; sourceTree = "<group>"; };
 		62B755221A6B4C5700DF4CB4 /* WindowsAzureMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMessaging.framework; sourceTree = "<group>"; };
 		62B755231A6B4C5700DF4CB4 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
+		830B3B4B1A6B6B5E00889B6B /* FinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
+		830B3B4C1A6B6B5E00889B6B /* FinalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalViewController.m; sourceTree = "<group>"; };
 		8E943BA5ECBACC548B707EC5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A1626A1A6A258D00A65392 /* BuyBuyBye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyBuyBye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A1626E1A6A258D00A65392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				B2A162741A6A258D00A65392 /* ViewController.h */,
 				B2A162751A6A258D00A65392 /* ViewController.m */,
 				B2A162771A6A258D00A65392 /* Main.storyboard */,
+				830B3B4B1A6B6B5E00889B6B /* FinalViewController.h */,
+				830B3B4C1A6B6B5E00889B6B /* FinalViewController.m */,
 				B2A162CB1A6ABD0E00A65392 /* TableViewController.h */,
 				B2A162CC1A6ABD0E00A65392 /* TableViewController.m */,
 				B2A1627A1A6A258D00A65392 /* Images.xcassets */,
@@ -308,6 +313,7 @@
 				B2A162761A6A258D00A65392 /* ViewController.m in Sources */,
 				B2A162731A6A258D00A65392 /* AppDelegate.m in Sources */,
 				B2A162701A6A258D00A65392 /* main.m in Sources */,
+				830B3B4D1A6B6B5E00889B6B /* FinalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
