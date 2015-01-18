@@ -57,6 +57,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-4Z-8XP">
                                 <rect key="frame" x="82" y="229" width="253" height="30"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -71,7 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="BuyBuyBye" id="fEo-dg-cGu">
                         <barButtonItem key="rightBarButtonItem" title="All Items" id="zlr-Gf-5uJ">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="JF8-IH-P3U" kind="show" id="AQo-fA-3LU"/>
                             </connections>
