@@ -9,6 +9,7 @@
 #import "TableViewController.h"
 #import "WishList.h"
 #import <AFNetworking/AFHTTPRequestOperationManager.h>
+#import "FinalViewController.h"
 
 @interface TableViewController ()
 
@@ -66,20 +67,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     // do stuff
     Item* i = [[[WishList sharedHelper] getList] objectAtIndex:indexPath.row];
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
-    NSDictionary* paramName = @{ @"OPERATION-NAME": @"findItemsByKeywords", @"SERVICE-VERSION": @"1.0.0", @"SECURITY-APPNAME": @"MakeWha00-d9a3-45a1-9273-24390350eed",@"RESPONSE-DATA-FORMAT":@"JSON", @"REST-PAYLOAD": @"", @"keywords":i.name};
-    [manager GET:@"http://svcs.ebay.com/services/search/FindingService/v1" parameters:paramName success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
 
-    
+
+    self.nameOfItemSelected = i.name;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -120,14 +114,19 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"ShowDetails"]) {
+        FinalViewController* finalVC = (FinalViewController*)segue.destinationViewController;
+        NSIndexPath* myNewPath = self.tableView.indexPathForSelectedRow;
+        Item* i = [[[WishList sharedHelper] getList] objectAtIndex:myNewPath.row];
+        finalVC.tempItem = i;
+
+    }
 }
-*/
+
 
 @end
