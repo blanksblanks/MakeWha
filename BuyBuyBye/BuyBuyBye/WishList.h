@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
+#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "Item.h"
 #import "AppDelegate.h"
 
@@ -18,13 +18,12 @@
  * Call it once on application start
  */
 
+// we dont use this
+@property (nonatomic, strong) NSMutableArray *list;
+
 +(id) sharedHelper;
 
-//we dont use this
-@property (strong, nonatomic, readonly) NSMutableArray *list;
-
 - (NSMutableArray*)getList;
-
 - (void)addItem:(Item *) item;
 - (void)deleteItem:(Item *) item;
 
