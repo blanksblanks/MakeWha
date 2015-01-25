@@ -48,6 +48,18 @@
         [btnLayer setCornerRadius:8.0f];
     }
     
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Device has no camera"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+        
+    }
+    
     _textField.delegate = self;
 }
 
@@ -98,6 +110,9 @@
     _img.image = image;
     _img.contentMode = UIViewContentModeScaleAspectFill;
     _img.clipsToBounds = YES;
+    
+    //make sure nothing gets squished
+    _imageView.contentMode = UIViewContentModeScaleAspectFit;
     _imageView.image = image;
 }
 

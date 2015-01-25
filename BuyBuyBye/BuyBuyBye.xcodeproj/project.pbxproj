@@ -248,11 +248,11 @@
 				TargetAttributes = {
 					B2A162691A6A258D00A65392 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = ZJ2APTZC7T;
+						DevelopmentTeam = RZSY72JCGA;
 					};
 					B2A162821A6A258D00A65392 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = ZJ2APTZC7T;
+						DevelopmentTeam = RZSY72JCGA;
 						TestTargetID = B2A162691A6A258D00A65392;
 					};
 				};
@@ -469,6 +469,8 @@
 			baseConfigurationReference = 485F22C014E41740EC3193BC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -476,6 +478,7 @@
 				INFOPLIST_FILE = BuyBuyBye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = BuyBuyBye;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -485,6 +488,8 @@
 			baseConfigurationReference = 1D93E7CEF513E52773B8A8C7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -492,6 +497,7 @@
 				INFOPLIST_FILE = BuyBuyBye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = BuyBuyBye;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
