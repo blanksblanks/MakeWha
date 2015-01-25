@@ -80,7 +80,7 @@
     float roundedSliderValue = lroundf(self.timeSlider.value);
     [self.timeSlider setValue:roundedSliderValue animated:YES];
     
-    self.timeLabel.text = [NSString stringWithFormat:@"%.0f Days",roundedSliderValue];
+    self.timeLabel.text = [NSString stringWithFormat:@"Number of Days: %.0f",roundedSliderValue];
 }
 
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
