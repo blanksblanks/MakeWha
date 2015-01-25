@@ -179,8 +179,9 @@
     }
     [alert show];
     
-    //remove the text in box after the thing shows
+    //remove the text in box after the thing shows and the image after pressing add item
     self.textField.text = @"";
+    self.imageView.image = nil;
 }
 
 - (NSDate *)getSystemTime {
