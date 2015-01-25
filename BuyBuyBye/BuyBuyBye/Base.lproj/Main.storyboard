@@ -216,7 +216,7 @@
                                 </subviews>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-C8-sUN">
-                                <rect key="frame" x="92" y="422" width="240" height="240"/>
+                                <rect key="frame" x="56" y="-58" width="44" height="3"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.64313725489999995" green="0.91372549020000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>

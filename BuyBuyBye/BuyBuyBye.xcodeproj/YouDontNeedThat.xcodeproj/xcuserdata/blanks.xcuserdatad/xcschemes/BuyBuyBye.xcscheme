@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B2A162691A6A258D00A65392"
-               BuildableName = "BuyBuyBye.app"
-               BlueprintName = "BuyBuyBye"
-               ReferencedContainer = "container:BuyBuyBye.xcodeproj">
+               BuildableName = "YouDontNeedThat.app"
+               BlueprintName = "YouDontNeedThat"
+               ReferencedContainer = "container:YouDontNeedThat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B2A162821A6A258D00A65392"
-               BuildableName = "BuyBuyByeTests.xctest"
-               BlueprintName = "BuyBuyByeTests"
-               ReferencedContainer = "container:BuyBuyBye.xcodeproj">
+               BuildableName = "YouDontNeedThatTests.xctest"
+               BlueprintName = "YouDontNeedThatTests"
+               ReferencedContainer = "container:YouDontNeedThat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B2A162821A6A258D00A65392"
-               BuildableName = "BuyBuyByeTests.xctest"
-               BlueprintName = "BuyBuyByeTests"
-               ReferencedContainer = "container:BuyBuyBye.xcodeproj">
+               BuildableName = "YouDontNeedThatTests.xctest"
+               BlueprintName = "YouDontNeedThatTests"
+               ReferencedContainer = "container:YouDontNeedThat.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B2A162691A6A258D00A65392"
-            BuildableName = "BuyBuyBye.app"
-            BlueprintName = "BuyBuyBye"
-            ReferencedContainer = "container:BuyBuyBye.xcodeproj">
+            BuildableName = "YouDontNeedThat.app"
+            BlueprintName = "YouDontNeedThat"
+            ReferencedContainer = "container:YouDontNeedThat.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B2A162691A6A258D00A65392"
-            BuildableName = "BuyBuyBye.app"
-            BlueprintName = "BuyBuyBye"
-            ReferencedContainer = "container:BuyBuyBye.xcodeproj">
+            BuildableName = "YouDontNeedThat.app"
+            BlueprintName = "YouDontNeedThat"
+            ReferencedContainer = "container:YouDontNeedThat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B2A162691A6A258D00A65392"
-            BuildableName = "BuyBuyBye.app"
-            BlueprintName = "BuyBuyBye"
-            ReferencedContainer = "container:BuyBuyBye.xcodeproj">
+            BuildableName = "YouDontNeedThat.app"
+            BlueprintName = "YouDontNeedThat"
+            ReferencedContainer = "container:YouDontNeedThat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -59,17 +59,21 @@
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *date = [dateFormatter stringFromDate:i.time];
     cell.textLabel.numberOfLines = 0;
+//    [[self cell.textLabel] setFont:[UIFont fontWithName:@"Cambria" size:17]];
     cell.textLabel.text = [NSString stringWithFormat:@"%@\n%@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], date];
     UIImage *image = i.image;
     cell.imageView.image = image;
     
     if ([i.time timeIntervalSinceNow] < 0.0) {
-        cell.backgroundColor = [[UIColor alloc]initWithRed:254.0/255.0 green:129.0/255.0 blue:129.0/255.0 alpha:1];
+        UIColor* mint = [[UIColor alloc]initWithRed:254.0/255.0 green:129.0/255.0 blue:129.0/255.0 alpha:1];
+        cell.backgroundColor = mint; // [self mixRandomColorWith:mint];
     }
     else if (indexPath.row % 2) {
-        cell.backgroundColor = [[UIColor alloc]initWithRed:210.0/255.0 green:212.0/255.0 blue:220.0/255.0 alpha:1];
+        UIColor* color2 = [[UIColor alloc]initWithRed:210.0/255.0 green:212.0/255.0 blue:220.0/255.0 alpha:1];
+        cell.backgroundColor = color2; // [self mixRandomColorWith:color2];
     } else {
-        cell.backgroundColor = [[UIColor alloc]initWithRed:179.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1];
+        UIColor* color3 = [[UIColor alloc]initWithRed:179.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1];
+        cell.backgroundColor = color3; // [self mixRandomColorWith:color3];
     }
     return cell;
 }
@@ -85,9 +89,6 @@
     
     // do stuff
     Item* i = [[[WishList sharedHelper] getList] objectAtIndex:indexPath.row];
-    
-
-
     self.nameOfItemSelected = i.name;
 }
 
@@ -128,6 +129,17 @@
     return YES;
 }
 */
+
+- (UIColor*) mixRandomColorWith:(UIColor*) mix {
+    CGFloat r, g, b, a;
+    [mix getRed:&r green:&g blue:&b alpha:&a];
+    r = ((CGFloat) arc4random_uniform(256) + r) / 2;
+    g = ((CGFloat) arc4random_uniform(256) + g) / 2;
+    b = ((CGFloat) arc4random_uniform(256) + b) /2;
+    UIColor* color = [[UIColor alloc]initWithRed:r/255.0 green:129.0/255.0 blue:129.0/255.0 alpha:1];
+    return color;
+}
+
 
 
 #pragma mark - Navigation
