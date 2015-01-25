@@ -99,6 +99,7 @@
     _photoController.delegate = self;
     _photoController.sourceType = UIImagePickerControllerSourceTypeCamera;
     _photoController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    _photoController.allowsEditing = YES;
     _photoController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
     [self presentViewController:_photoController animated:YES completion:^{
         
@@ -107,10 +108,13 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
     [_photoController dismissViewControllerAnimated:NO completion:nil];
+    
+    //This is for the ALL ITEMS LIST
     _img.image = image;
     _img.contentMode = UIViewContentModeScaleAspectFill;
     _img.clipsToBounds = YES;
     
+    //This is for the FIRST SCREEN
     //make sure nothing gets squished
     _imageView.contentMode = UIViewContentModeScaleAspectFit;
     _imageView.image = image;
