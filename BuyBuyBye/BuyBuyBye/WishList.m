@@ -72,11 +72,13 @@ static NSString *const LIST_ARRAY = @"ListArray";
     
     // Insert item into internal phone data
     [_list addObject:item];
+    
     // Must do this for all custom objects that don't fit property list
     NSData *savedData = [NSKeyedArchiver archivedDataWithRootObject:_list];
     // Update LIST_ARRAY with newest _list
     [[NSUserDefaults standardUserDefaults]setObject:savedData forKey:LIST_ARRAY];
     [[NSUserDefaults standardUserDefaults]synchronize];
+  
     
     // Log complete contents of list after new addition
     NSLog(@"%@", _list);
@@ -86,7 +88,6 @@ static NSString *const LIST_ARRAY = @"ListArray";
     }
     int size = (int) [_list count];
     NSLog(@"there are %d objects in the array", size);
-    
 }
 
 - (void)deleteItem:(Item *) item {

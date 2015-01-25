@@ -144,7 +144,15 @@
             newItem.time = expirationTime;
             newItem.image = _img.image;
             
-            [[WishList sharedHelper] addItem:newItem];
+            //this is what is taking long
+            //[[WishList sharedHelper] addItem:newItem];
+            
+            WishList *trial = [WishList sharedHelper];
+            
+            
+            [trial addItem:newItem];
+            
+            NSLog(@"");
         }
 
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
