@@ -36,8 +36,6 @@ static NSString *const LIST_ARRAY = @"ListArray";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // Initialize the Mobile Service client with your URL and key
-
         if (![[NSUserDefaults standardUserDefaults]dataForKey:LIST_ARRAY]) {
             _list = [[NSMutableArray alloc] init];
             NSLog(@"NEW ARRAY");
