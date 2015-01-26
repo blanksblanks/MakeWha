@@ -248,11 +248,11 @@
 				TargetAttributes = {
 					B2A162691A6A258D00A65392 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = RZSY72JCGA;
+						DevelopmentTeam = ZJ2APTZC7T;
 					};
 					B2A162821A6A258D00A65392 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = RZSY72JCGA;
+						DevelopmentTeam = ZJ2APTZC7T;
 						TestTargetID = B2A162691A6A258D00A65392;
 					};
 				};
