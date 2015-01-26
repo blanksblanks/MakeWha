@@ -61,13 +61,20 @@
     }
     
     _textField.delegate = self;
+    _secondTextField.delegate = self;
 }
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [_textField resignFirstResponder];
+    [_secondTextField resignFirstResponder];
 }
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
+    return NO;
+}
+
+-(BOOL) secondTextFieldShouldReturn:(UITextField *)secondTextField{
+    [secondTextField resignFirstResponder];
     return NO;
 }
 

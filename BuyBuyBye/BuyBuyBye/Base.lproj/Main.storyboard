@@ -160,6 +160,7 @@
                         <outlet property="addbutton" destination="dCJ-zV-unl" id="5Of-kh-8xu"/>
                         <outlet property="imageView" destination="xyX-4m-EGf" id="1Ph-yr-KjN"/>
                         <outlet property="photobutton" destination="2kA-tC-1AW" id="dRW-kX-dUF"/>
+                        <outlet property="secondTextField" destination="Yh4-N9-63F" id="s2M-IL-h2a"/>
                         <outlet property="textField" destination="Icy-4Z-8XP" id="bTz-Ad-2dC"/>
                         <outlet property="timeLabel" destination="B4o-u7-5wo" id="ctR-9X-gvL"/>
                         <outlet property="timeSlider" destination="6fb-rg-VJa" id="Q9v-id-95k"/>
