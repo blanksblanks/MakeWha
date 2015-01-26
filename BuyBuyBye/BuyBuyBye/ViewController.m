@@ -129,6 +129,7 @@
 
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
     NSString *nameOfItemAdded = self.textField.text;
+    NSString *priceThatUserEntered = self.secondTextField.text;
     float timeLeft = self.timeSlider.value; //value in hours
     
     /*we will be calculating the expiration times by checking the system time
@@ -144,7 +145,11 @@
     
     UIAlertView *alert;
     
-    if (![nameOfItemAdded isEqualToString:@""]){
+    if([nameOfItemAdded isEqualToString:@""]) {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an item name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    } else if ([priceThatUserEntered isEqualToString:@""]) {
+        alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter the price." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    } else {
         Item *newItem = [[Item alloc] init];
         if (newItem) {
             newItem.name = nameOfItemAdded;
@@ -152,16 +157,9 @@
             newItem.image = _img.image;
             
             //this is what is taking long
-            //[[WishList sharedHelper] addItem:newItem];
-            
-            WishList *trial = [WishList sharedHelper];
-            
-            
-            [trial addItem:newItem];
-            
-            NSLog(@"");
+            [[WishList sharedHelper] addItem:newItem];
         }
-
+        
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
         
         // Set the fire date/time
@@ -181,13 +179,45 @@
         
         alert = [[UIAlertView alloc] initWithTitle:@"Update" message:[NSString stringWithFormat:@"You have added %@ to the list.",nameOfItemAdded] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     }
-    else {
-        alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an item name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    }
+    
+//    if (![nameOfItemAdded isEqualToString:@""] && ![priceThatUserEntered isEqualToString:@""]){
+//        Item *newItem = [[Item alloc] init];
+//        if (newItem) {
+//            newItem.name = nameOfItemAdded;
+//            newItem.time = expirationTime;
+//            newItem.image = _img.image;
+//            
+//            //this is what is taking long
+//            [[WishList sharedHelper] addItem:newItem];
+//        }
+//
+//        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//        
+//        // Set the fire date/time
+//        [localNotification setFireDate:expirationTime];
+//        [localNotification setTimeZone:[NSTimeZone defaultTimeZone]];
+//        
+//        localNotification.applicationIconBadgeNumber=1;
+//        
+//        // Setup alert notification
+//        [localNotification setAlertAction:@"The wait is over!"];
+//        [localNotification setAlertBody:[NSString stringWithFormat:@"Do you still want %@?", nameOfItemAdded]];
+//        
+//        localNotification.soundName=UILocalNotificationDefaultSoundName;
+//        [localNotification setHasAction:YES];
+//        UIApplication *app=[UIApplication sharedApplication];
+//        [app scheduleLocalNotification:localNotification];
+//        
+//        alert = [[UIAlertView alloc] initWithTitle:@"Update" message:[NSString stringWithFormat:@"You have added %@ to the list.",nameOfItemAdded] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//    }
+//    else {
+//        alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an item name." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//    }
     [alert show];
     
     //remove the text in box after the thing shows
     self.textField.text = @"";
+    self.secondTextField = @"";
 }
 
 - (NSDate *)getSystemTime {
