@@ -158,6 +158,11 @@
             
             //this is what is taking long
             [[WishList sharedHelper] addItem:newItem];
+            
+            WishList *trail = [WishList sharedHelper];
+            [trail addItem:newItem];
+            
+            NSLog(@"");
         }
         
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
@@ -217,7 +222,7 @@
     
     //remove the text in box after the thing shows
     self.textField.text = @"";
-    self.secondTextField = @"";
+    self.secondTextField.text = @"";
 }
 
 - (NSDate *)getSystemTime {
