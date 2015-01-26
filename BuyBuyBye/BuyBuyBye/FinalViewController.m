@@ -73,6 +73,7 @@
 
 - (void)updateLabels {
     self.ItemName.text = self.tempItem.name;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.image = self.tempItem.image;
 }
 

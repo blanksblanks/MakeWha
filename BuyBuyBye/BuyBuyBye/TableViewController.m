@@ -59,22 +59,23 @@
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *date = [dateFormatter stringFromDate:i.time];
     cell.textLabel.numberOfLines = 0;
-//    [[self cell.textLabel] setFont:[UIFont fontWithName:@"Cambria" size:17]];
     cell.textLabel.font = [UIFont fontWithName:@"Noteworthy" size:17];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@\nDecision Time: %@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], date];
     UIImage *image = i.image;
     cell.imageView.image = image;
     
     if ([i.time timeIntervalSinceNow] < 0.0) {
         UIColor* mint = [[UIColor alloc]initWithRed:254.0/255.0 green:129.0/255.0 blue:129.0/255.0 alpha:1];
         cell.backgroundColor = mint; // [self mixRandomColorWith:mint];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@\nExpired: %@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], date];
     }
     else if (indexPath.row % 2) {
         UIColor* color2 = [[UIColor alloc]initWithRed:210.0/255.0 green:212.0/255.0 blue:220.0/255.0 alpha:1];
         cell.backgroundColor = color2; // [self mixRandomColorWith:color2];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@\nExpires: %@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], date];
     } else {
         UIColor* color3 = [[UIColor alloc]initWithRed:179.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1];
         cell.backgroundColor = color3; // [self mixRandomColorWith:color3];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@\nExpires: %@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], date];
     }
     return cell;
 }
