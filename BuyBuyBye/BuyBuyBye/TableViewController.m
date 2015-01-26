@@ -60,7 +60,8 @@
     NSString *date = [dateFormatter stringFromDate:i.time];
     cell.textLabel.numberOfLines = 0;
 //    [[self cell.textLabel] setFont:[UIFont fontWithName:@"Cambria" size:17]];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@\n%@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], date];
+    cell.textLabel.font = [UIFont fontWithName:@"Noteworthy" size:17];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@\nDecision Time: %@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], date];
     UIImage *image = i.image;
     cell.imageView.image = image;
     
