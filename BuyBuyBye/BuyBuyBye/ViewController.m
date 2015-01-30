@@ -161,7 +161,7 @@
             newItem.image = _img.image;
             
             //this is what is taking long
-            [[WishList sharedHelper] addItem:newItem];
+//            [[WishList sharedHelper] addItem:newItem];
             
             WishList *trail = [WishList sharedHelper];
             [trail addItem:newItem];
