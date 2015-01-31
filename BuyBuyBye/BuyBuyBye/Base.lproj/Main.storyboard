@@ -240,12 +240,6 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="eBay says this costs $" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1Z-tg-vwp">
-                                        <rect key="frame" x="82" y="145" width="150" height="36"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-C8-sUN">
                                         <rect key="frame" x="57" y="48" width="200" height="200"/>
                                         <constraints>
@@ -253,7 +247,7 @@
                                             <constraint firstAttribute="height" constant="240" id="kmk-lc-Zfy"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpq-3b-3Qp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="eBay says this costs $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpq-3b-3Qp">
                                         <rect key="frame" x="229" y="261" width="42" height="21"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -262,13 +256,11 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="qaX-C8-sUN" secondAttribute="centerX" id="GWz-gU-Dmn"/>
-                                    <constraint firstItem="X1Z-tg-vwp" firstAttribute="top" secondItem="qaX-C8-sUN" secondAttribute="bottom" constant="10" id="Heg-KV-Ah8"/>
                                     <constraint firstItem="qaX-C8-sUN" firstAttribute="top" secondItem="6tE-hV-KAM" secondAttribute="bottom" constant="10" id="SNi-iR-Xga"/>
                                     <constraint firstItem="6tE-hV-KAM" firstAttribute="top" secondItem="GMb-qP-4Xt" secondAttribute="top" id="UUp-kg-1ZV"/>
                                     <constraint firstItem="FFb-V0-Mrb" firstAttribute="top" secondItem="qaX-C8-sUN" secondAttribute="bottom" constant="35" id="Zti-PI-H5T"/>
                                     <constraint firstAttribute="centerX" secondItem="6tE-hV-KAM" secondAttribute="centerX" id="btl-Vo-Rgn"/>
-                                    <constraint firstItem="Mpq-3b-3Qp" firstAttribute="leading" secondItem="X1Z-tg-vwp" secondAttribute="trailing" constant="2" id="buV-hL-7oZ"/>
-                                    <constraint firstAttribute="centerX" secondItem="X1Z-tg-vwp" secondAttribute="centerX" id="g2Z-qE-URF"/>
+                                    <constraint firstAttribute="centerX" secondItem="Mpq-3b-3Qp" secondAttribute="centerX" id="lTG-Td-YgD"/>
                                     <constraint firstItem="Mpq-3b-3Qp" firstAttribute="top" secondItem="qaX-C8-sUN" secondAttribute="bottom" constant="10" id="oYW-wl-VyA"/>
                                 </constraints>
                             </view>

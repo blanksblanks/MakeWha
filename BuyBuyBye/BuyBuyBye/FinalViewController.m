@@ -91,8 +91,10 @@
         NSDictionary *firstItem = [items firstObject];
         
         NSString *price = [[[[[firstItem objectForKey:@"sellingStatus"] firstObject] objectForKey:@"convertedCurrentPrice"] firstObject] objectForKey:@"__value__"];
+        NSString *text = @"eBay says this costs $";
+        NSString *priceText = [NSString stringWithFormat:@"%@ %@", text, price];
         
-        self.Price.text = price;
+        self.Price.text = priceText;
         NSLog(@"JSON: %@", price);
         
         NSString *website = [firstItem objectForKey:@"viewItemURL"];
