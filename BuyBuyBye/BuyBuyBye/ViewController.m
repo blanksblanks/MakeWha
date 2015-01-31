@@ -139,7 +139,7 @@
     /*we will be calculating the expiration times by checking the system time
      against the timer expiration time*/
     NSDate *currentTime = [self getSystemTime];
-    NSTimeInterval secondsPerHour = 1; //set back to 3600 after demo
+    NSTimeInterval secondsPerHour = 3600; //set back to 3600 after demo
     NSDate *expirationTime = [currentTime dateByAddingTimeInterval:24*timeLeft*secondsPerHour];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd hh:mm:ss";
