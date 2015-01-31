@@ -26,6 +26,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Canter Bold 3D.otf</string>
+		<string>Canter Bold Shadow.otf</string>
+		<string>Canter Bold Strips.otf</string>
+		<string>Canter Bold.otf</string>
+		<string>Canter Outline.otf</string>
+		<string>Hero Light.otf</string>
+		<string>Hero.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -37,18 +47,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Canter Bold 3D.otf</string>
-		<string>Canter Bold Shadow.otf</string>
-		<string>Canter Bold Strips.otf</string>
-		<string>Canter Bold.otf</string>
-		<string>Canter Outline.otf</string>
-		<string>Hero Light.otf</string>
-		<string>Hero.otf</string>
 	</array>
 </dict>
 </plist>
