@@ -116,17 +116,6 @@
                                     <constraint firstItem="dCJ-zV-unl" firstAttribute="baseline" secondItem="2kA-tC-1AW" secondAttribute="firstBaseline" id="xb9-g4-Kjd"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="736" translatesAutoresizingMaskIntoConstraints="NO" id="Nda-hs-eYv">
-                                <rect key="frame" x="0.0" y="64" width="414" height="736"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
-                                        <size key="value" width="414" height="736"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="rect" keyPath="frame">
-                                        <rect key="value" x="0.0" y="0.0" width="414" height="736"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.64313725490196083" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -288,6 +277,8 @@
                             <constraint firstItem="nih-bi-fmP" firstAttribute="top" secondItem="GMb-qP-4Xt" secondAttribute="bottom" constant="53" id="iGZ-EY-1DT"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
                     <connections>
                         <outlet property="ItemName" destination="6tE-hV-KAM" id="arU-He-xQ5"/>
                         <outlet property="Price" destination="Mpq-3b-3Qp" id="Y3N-bg-aUj"/>
