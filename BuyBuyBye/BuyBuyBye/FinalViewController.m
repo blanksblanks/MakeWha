@@ -90,17 +90,22 @@
         
         NSDictionary *firstItem = [items firstObject];
         
-        NSString *price = [[[[[firstItem objectForKey:@"sellingStatus"] firstObject] objectForKey:@"convertedCurrentPrice"] firstObject] objectForKey:@"__value__"];
-        NSString *text = @"eBay says this costs $";
-        NSString *priceText = [NSString stringWithFormat:@"%@ %@", text, price];
+        NSString *price, *text, *priceText, *website, *needle;
+        
+        price = [[[[[firstItem objectForKey:@"sellingStatus"] firstObject] objectForKey:@"convertedCurrentPrice"] firstObject] objectForKey:@"__value__"];
+        if ([price isEqual:[NSNull null]]) {
+            text = @"eBay says this costs $";
+            priceText = [NSString stringWithFormat:@"%@ %@", text, price];
+            website = [firstItem objectForKey:@"viewItemURL"];
+            needle = [[website description] componentsSeparatedByString:@"\""][1];
+        } else {
+            priceText = @"eBay could not find this item";
+            needle = @"http://www.ebay.com/";
+        }
         
         self.Price.text = priceText;
-        NSLog(@"JSON: %@", price);
-        
-        NSString *website = [firstItem objectForKey:@"viewItemURL"];
-        NSString *needle = [[website description] componentsSeparatedByString:@"\""][1];
         whatIWant = needle;
-        
+        NSLog(@"JSON: %@", price);
         NSLog(@"%@",website);
         NSLog(@"%@",needle);
         
