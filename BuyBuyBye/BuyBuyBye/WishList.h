@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
+//#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "Item.h"
 #import "AppDelegate.h"
 

@@ -17,8 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.client = [MSClient clientWithApplicationURLString:@"https://buybuybye.azure-mobile.net/"
-                                            applicationKey:@"eRmmTVXOhUqMUJCMoATWllOTfnOQQT40"];
+//    self.client = [MSClient clientWithApplicationURLString:@"https://buybuybye.azure-mobile.net/"
+//                                            applicationKey:@"eRmmTVXOhUqMUJCMoATWllOTfnOQQT40"];
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
 #ifdef __IPHONE_8_0
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert) categories:nil];
