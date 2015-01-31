@@ -73,6 +73,7 @@
 
 - (void)updateLabels {
     self.ItemName.text = self.tempItem.name;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.image = self.tempItem.image;
 }
 
@@ -89,15 +90,22 @@
         
         NSDictionary *firstItem = [items firstObject];
         
-        NSString *price = [[[[[firstItem objectForKey:@"sellingStatus"] firstObject] objectForKey:@"convertedCurrentPrice"] firstObject] objectForKey:@"__value__"];
+        NSString *price, *text, *priceText, *website, *needle;
         
-        self.Price.text = price;
-        NSLog(@"JSON: %@", price);
+        price = [[[[[firstItem objectForKey:@"sellingStatus"] firstObject] objectForKey:@"convertedCurrentPrice"] firstObject] objectForKey:@"__value__"];
+        if ([price isEqual:[NSNull null]]) {
+            text = @"eBay says this costs $";
+            priceText = [NSString stringWithFormat:@"%@ %@", text, price];
+            website = [firstItem objectForKey:@"viewItemURL"];
+            needle = [[website description] componentsSeparatedByString:@"\""][1];
+        } else {
+            priceText = @"eBay could not find this item";
+            needle = @"http://www.ebay.com/";
+        }
         
-        NSString *website = [firstItem objectForKey:@"viewItemURL"];
-        NSString *needle = [[website description] componentsSeparatedByString:@"\""][1];
+        self.Price.text = priceText;
         whatIWant = needle;
-        
+        NSLog(@"JSON: %@", price);
         NSLog(@"%@",website);
         NSLog(@"%@",needle);
         

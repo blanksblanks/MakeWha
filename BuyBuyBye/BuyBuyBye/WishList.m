@@ -11,10 +11,10 @@
 #pragma mark * Private interface
 
 
-@interface WishList() <MSFilter>
+@interface WishList() // <MSFilter>
 
-@property (nonatomic, strong)   MSTable *table;
-@property (nonatomic)           NSInteger busyCount;
+//@property (nonatomic, strong)   MSTable *table;
+//@property (nonatomic)           NSInteger busyCount;
 
 @end
 
@@ -36,8 +36,6 @@ static NSString *const LIST_ARRAY = @"ListArray";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // Initialize the Mobile Service client with your URL and key
-
         if (![[NSUserDefaults standardUserDefaults]dataForKey:LIST_ARRAY]) {
             _list = [[NSMutableArray alloc] init];
             NSLog(@"NEW ARRAY");
@@ -59,16 +57,16 @@ static NSString *const LIST_ARRAY = @"ListArray";
 - (void)addItem:(Item *) item {
 
     // Insert item into backend
-    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
-    self.table = [client tableWithName:@"WishListItem"];
-    NSDictionary *object = @{ @"name" : item.name};
-    [self.table insert:object completion:^(NSDictionary *insObject, NSError *error) {
-        if (error) {
-            NSLog(@"Error: %@", error);
-        } else {
-            NSLog(@"Item inserted, id: %@", [insObject objectForKey:@"id"]);
-        }
-    }];
+//    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+//    self.table = [client tableWithName:@"WishListItem"];
+//    NSDictionary *object = @{ @"name" : item.name};
+//    [self.table insert:object completion:^(NSDictionary *insObject, NSError *error) {
+//        if (error) {
+//            NSLog(@"Error: %@", error);
+//        } else {
+//            NSLog(@"Item inserted, id: %@", [insObject objectForKey:@"id"]);
+//        }
+//    }];
     
     // Insert item into internal phone data
     [_list addObject:item];
