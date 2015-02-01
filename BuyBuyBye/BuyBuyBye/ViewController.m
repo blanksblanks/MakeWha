@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.timeLabel.text = [NSString stringWithFormat:@"%.0f Days",self.timeSlider.value];
     _img = [[UIImageView alloc]init];
     
     NSArray *buttons = [NSArray arrayWithObjects: self.addbutton, self.photobutton,nil];
