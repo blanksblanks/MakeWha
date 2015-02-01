@@ -214,6 +214,7 @@
     //remove the text in box after the thing shows
     self.textField.text = @"";
     self.secondTextField.text = @"";
+    //imageview is the one on the screen after you take a pic. img is for the tableview
     self.imageView.image = nil;
 }
 - (NSDate *)getSystemTime {
