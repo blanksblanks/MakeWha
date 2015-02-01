@@ -12,9 +12,11 @@
 @interface Item : NSObject <NSCoding> /*NSKeyedArchiver serializes NSCoding-compliant classes to/from data representation*/
 
 @property NSString *name;
+@property NSString *cost;
 @property NSDate *time;
 @property UIImage *image;
 
 - (NSString*)getName;
+- (NSString*)getCost;
 
 @end

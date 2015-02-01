@@ -121,7 +121,7 @@
 }
 - (IBAction)addItemButtonPressed:(UIButton *)sender {
     NSString *nameOfItemAdded = self.textField.text;
-    NSString *priceThatUserEntered = self.secondTextField.text;
+    NSString *priceThatUserEntered = [NSString stringWithFormat:@"$%@", self.secondTextField.text];
     float timeLeft = self.timeSlider.value; //value in hours
     NSLog(@"Time slider value: %f", self.timeSlider.value);
     
@@ -146,6 +146,7 @@
         Item *newItem = [[Item alloc] init];
         if (newItem) {
             newItem.name = nameOfItemAdded;
+            newItem.cost = priceThatUserEntered;
             newItem.time = expirationTime;
             newItem.image = _img.image;
             

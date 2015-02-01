@@ -11,7 +11,6 @@
 @interface TableViewController : UITableViewController
 
 @property (nonatomic, strong) NSString *nameOfItemSelected;
-
 @property (strong, nonatomic) NSString *ItemName;
 
 @end
