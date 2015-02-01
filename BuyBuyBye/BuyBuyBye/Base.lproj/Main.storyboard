@@ -229,7 +229,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Do you still want to buy this?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFb-V0-Mrb">
                                         <rect key="frame" x="20" y="175" width="275" height="69"/>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -243,7 +243,7 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="eBay says this costs $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpq-3b-3Qp">
                                         <rect key="frame" x="229" y="261" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -255,7 +255,7 @@
                                     <constraint firstItem="FFb-V0-Mrb" firstAttribute="top" secondItem="qaX-C8-sUN" secondAttribute="bottom" constant="35" id="Zti-PI-H5T"/>
                                     <constraint firstAttribute="centerX" secondItem="6tE-hV-KAM" secondAttribute="centerX" id="btl-Vo-Rgn"/>
                                     <constraint firstAttribute="centerX" secondItem="Mpq-3b-3Qp" secondAttribute="centerX" id="lTG-Td-YgD"/>
-                                    <constraint firstItem="Mpq-3b-3Qp" firstAttribute="top" secondItem="qaX-C8-sUN" secondAttribute="bottom" constant="10" id="oYW-wl-VyA"/>
+                                    <constraint firstItem="Mpq-3b-3Qp" firstAttribute="top" secondItem="qaX-C8-sUN" secondAttribute="bottom" constant="20" id="oYW-wl-VyA"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZr-hI-4h4" userLabel="WEBSITE BUTTON">
