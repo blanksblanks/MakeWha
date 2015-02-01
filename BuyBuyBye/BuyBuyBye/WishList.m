@@ -131,8 +131,9 @@ static NSString *const LIST_ARRAY = @"ListArray";
     return _list;
 }
 
-- (NSMutableArray*)getList{
-    return _list;
+- (NSArray*)getList{
+    NSArray* reversedList = [[_list reverseObjectEnumerator] allObjects];
+    return reversedList;
 }
 
 @end
