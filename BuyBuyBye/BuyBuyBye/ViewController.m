@@ -227,6 +227,7 @@
     //remove the text in box after the thing shows
     self.textField.text = @"";
     self.secondTextField.text = @"";
+    self.imageView.image = nil;
 }
 
 - (NSDate *)getSystemTime {
