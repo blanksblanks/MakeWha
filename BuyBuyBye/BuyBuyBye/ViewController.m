@@ -59,22 +59,27 @@
     _textField.delegate = self;
     _secondTextField.delegate = self;
 }
+
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [_textField resignFirstResponder];
     [_secondTextField resignFirstResponder];
 }
+
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return NO;
 }
+
 -(BOOL) secondTextFieldShouldReturn:(UITextField *)secondTextField{
     [secondTextField resignFirstResponder];
     return NO;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)timeSliderChanged:(UISlider *)sender {
     float roundedSliderValue = lroundf(self.timeSlider.value);
     [self.timeSlider setValue:roundedSliderValue animated:YES];
