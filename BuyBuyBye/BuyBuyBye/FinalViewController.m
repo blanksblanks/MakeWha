@@ -93,7 +93,7 @@
         NSString *price, *text, *priceText, *website, *needle;
         
         price = [[[[[firstItem objectForKey:@"sellingStatus"] firstObject] objectForKey:@"convertedCurrentPrice"] firstObject] objectForKey:@"__value__"];
-        if ([price isEqual:[NSNull null]]) {
+        if (price.length == 0) {
             priceText = @"eBay could not find this item";
             needle = @"http://www.ebay.com/";
         } else {

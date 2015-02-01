@@ -34,7 +34,7 @@
 }
 
 - (NSString*)getCost{
-    if ([self.cost isEqual: [NSNull null]]){
+    if (self.cost.length == 0) {
         NSString *unknown = [NSString stringWithFormat:@"unknown"];
         return unknown;
     } else {
