@@ -58,7 +58,10 @@
 
 -(IBAction)exitButton {
     NSLog(@"exit button recognized");
-    exit(0);
+//    TableViewController *twc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TableViewController"];
+//    [self.navigationController pushViewController:twc animated:YES];
+    [[WishList sharedHelper] deleteItem:self.tempItem];
+    //    exit(0);
 }
 
 -(void) setTempItem:(Item *)tempItem {
