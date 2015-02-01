@@ -94,13 +94,13 @@
         
         price = [[[[[firstItem objectForKey:@"sellingStatus"] firstObject] objectForKey:@"convertedCurrentPrice"] firstObject] objectForKey:@"__value__"];
         if ([price isEqual:[NSNull null]]) {
+            priceText = @"eBay could not find this item";
+            needle = @"http://www.ebay.com/";
+        } else {
             text = @"eBay says this costs $";
             priceText = [NSString stringWithFormat:@"%@ %@", text, price];
             website = [firstItem objectForKey:@"viewItemURL"];
             needle = [[website description] componentsSeparatedByString:@"\""][1];
-        } else {
-            priceText = @"eBay could not find this item";
-            needle = @"http://www.ebay.com/";
         }
         
         self.Price.text = priceText;
