@@ -75,6 +75,7 @@ static NSString *const LIST_ARRAY = @"ListArray";
     NSData *savedData = [NSKeyedArchiver archivedDataWithRootObject:_list];
     // Update LIST_ARRAY with newest _list
     [[NSUserDefaults standardUserDefaults]setObject:savedData forKey:LIST_ARRAY];
+    //[[NSUserDefaults standardUserDefaults]setObject:_list forKey:LIST_ARRAY];
     [[NSUserDefaults standardUserDefaults]synchronize];
   
     
