@@ -153,7 +153,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Buy Buy Bye" id="fEo-dg-cGu">
                         <barButtonItem key="rightBarButtonItem" title="Wish List" id="zlr-Gf-5uJ">
-                            <color key="tintColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.58431372549019611" green="0.89803921568627454" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="JF8-IH-P3U" kind="show" id="AQo-fA-3LU"/>
                             </connections>
