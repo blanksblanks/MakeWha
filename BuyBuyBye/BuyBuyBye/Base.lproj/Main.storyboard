@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1HI-LB-ipS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1HI-LB-ipS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -45,17 +45,20 @@
                                 </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xyX-4m-EGf">
-                                <rect key="frame" x="87" y="278" width="240" height="240"/>
+                                <rect key="frame" x="117" y="278" width="180" height="180"/>
                                 <color key="backgroundColor" red="0.58431372549019611" green="0.89803921568627454" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Goj-3X-YZh"/>
+                                    <constraint firstAttribute="width" constant="180" id="Goj-3X-YZh"/>
                                     <constraint firstAttribute="width" secondItem="xyX-4m-EGf" secondAttribute="height" multiplier="1:1" id="JZC-6l-nEu"/>
-                                    <constraint firstAttribute="height" constant="240" id="a5T-4F-20v"/>
+                                    <constraint firstAttribute="height" constant="180" id="a5T-4F-20v"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What Are You Thinking of Buying?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-4Z-8XP">
                                 <rect key="frame" x="87" y="85" width="240" height="30"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9oK-un-7ZT"/>
+                                </constraints>
                                 <color key="textColor" red="0.1748881638" green="0.32966819409999998" blue="0.53395015000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -143,6 +146,7 @@
                                 <exclude reference="ABO-Wj-ggy"/>
                                 <exclude reference="Aip-MX-DIX"/>
                                 <exclude reference="nd6-CU-Ie7"/>
+                                <exclude reference="IKl-Jc-4D6"/>
                                 <exclude reference="Nmf-AV-NEN"/>
                             </mask>
                         </variation>
@@ -215,7 +219,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GMb-qP-4Xt" userLabel="Miniview">
-                                <rect key="frame" x="50" y="77" width="315" height="350"/>
+                                <rect key="frame" x="50" y="77" width="315" height="280"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tE-hV-KAM">
                                         <rect key="frame" x="7" y="0.0" width="300" height="40"/>
@@ -230,10 +234,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-C8-sUN">
-                                        <rect key="frame" x="57" y="48" width="200" height="200"/>
+                                        <rect key="frame" x="57" y="48" width="180" height="180"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="1y2-vD-Kz5"/>
-                                            <constraint firstAttribute="height" constant="240" id="kmk-lc-Zfy"/>
+                                            <constraint firstAttribute="width" constant="180" id="1y2-vD-Kz5"/>
+                                            <constraint firstAttribute="height" constant="180" id="kmk-lc-Zfy"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="eBay says this costs $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpq-3b-3Qp">
@@ -254,14 +258,14 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZr-hI-4h4" userLabel="WEBSITE BUTTON">
-                                <rect key="frame" x="88" y="480" width="88" height="37"/>
+                                <rect key="frame" x="88" y="414" width="88" height="37"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="15"/>
                                 <state key="normal" title="Visit site">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nih-bi-fmP" userLabel="QUIT BUTTON">
-                                <rect key="frame" x="220" y="480" width="106" height="37"/>
+                                <rect key="frame" x="220" y="414" width="106" height="37"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="15"/>
                                 <state key="normal" title="Nope, and quit!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -273,8 +277,9 @@
                             <constraint firstItem="GMb-qP-4Xt" firstAttribute="top" secondItem="jh7-Ua-hPw" secondAttribute="bottom" constant="15" id="262-yh-83Y"/>
                             <constraint firstAttribute="centerX" secondItem="KZr-hI-4h4" secondAttribute="centerX" constant="75" id="Dsm-Ws-NPY"/>
                             <constraint firstAttribute="centerX" secondItem="GMb-qP-4Xt" secondAttribute="centerX" id="Kra-rw-Tig"/>
-                            <constraint firstItem="KZr-hI-4h4" firstAttribute="top" secondItem="GMb-qP-4Xt" secondAttribute="bottom" constant="53" id="fY0-I3-Ymb"/>
-                            <constraint firstItem="nih-bi-fmP" firstAttribute="top" secondItem="GMb-qP-4Xt" secondAttribute="bottom" constant="53" id="iGZ-EY-1DT"/>
+                            <constraint firstAttribute="centerX" secondItem="nih-bi-fmP" secondAttribute="centerX" constant="-66" id="Mda-em-4rk"/>
+                            <constraint firstItem="KZr-hI-4h4" firstAttribute="top" secondItem="GMb-qP-4Xt" secondAttribute="bottom" id="fY0-I3-Ymb"/>
+                            <constraint firstItem="nih-bi-fmP" firstAttribute="top" secondItem="GMb-qP-4Xt" secondAttribute="bottom" id="iGZ-EY-1DT"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
