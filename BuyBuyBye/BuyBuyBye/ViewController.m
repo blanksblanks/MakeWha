@@ -81,9 +81,9 @@
     [self.timeSlider setValue:roundedSliderValue animated:YES];
     
     if (roundedSliderValue > 1) {
-        self.timeLabel.text = [NSString stringWithFormat:@"%.0f Days",roundedSliderValue];
+        self.timeLabel.text = [NSString stringWithFormat:@"%.0f days",roundedSliderValue];
     } else {
-        self.timeLabel.text = [NSString stringWithFormat:@"%.0f Day",roundedSliderValue];
+        self.timeLabel.text = [NSString stringWithFormat:@"%.0f day",roundedSliderValue];
     }
 }
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -124,11 +124,12 @@
     NSString *nameOfItemAdded = self.textField.text;
     NSString *priceThatUserEntered = self.secondTextField.text;
     float timeLeft = self.timeSlider.value; //value in hours
+    NSLog(@"Time slider value: %f", self.timeSlider.value);
     
     /*we will be calculating the expiration times by checking the system time
      against the timer expiration time*/
     NSDate *currentTime = [self getSystemTime];
-    NSTimeInterval secondsPerHour = 1; //set back to 3600 after demo
+    NSTimeInterval secondsPerHour = 3600; //set back to 3600 after demo
     NSDate *expirationTime = [currentTime dateByAddingTimeInterval:24*timeLeft*secondsPerHour];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd hh:mm:ss";
