@@ -150,6 +150,7 @@
 		B2A1626C1A6A258D00A65392 /* BuyBuyBye */ = {
 			isa = PBXGroup;
 			children = (
+				B2A162771A6A258D00A65392 /* Main.storyboard */,
 				B2A162711A6A258D00A65392 /* AppDelegate.h */,
 				B2A162721A6A258D00A65392 /* AppDelegate.m */,
 				6223FC231A6A45FE000589A1 /* WishList.h */,
@@ -160,7 +161,6 @@
 				B2A162751A6A258D00A65392 /* ViewController.m */,
 				B2A162CB1A6ABD0E00A65392 /* TableViewController.h */,
 				B2A162CC1A6ABD0E00A65392 /* TableViewController.m */,
-				B2A162771A6A258D00A65392 /* Main.storyboard */,
 				830B3B4B1A6B6B5E00889B6B /* FinalViewController.h */,
 				830B3B4C1A6B6B5E00889B6B /* FinalViewController.m */,
 				B2A1627C1A6A258D00A65392 /* LaunchScreen.xib */,

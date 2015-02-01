@@ -58,27 +58,30 @@
     [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     NSString *date = [dateFormatter stringFromDate:i.time];
     cell.textLabel.numberOfLines = 0;
-    cell.textLabel.font = [UIFont fontWithName:@"Noteworthy" size:17];
+    cell.textLabel.font = [UIFont fontWithName:@"American Typewriter" size:14];
     UIImage *image = i.image;
     cell.imageView.image = image;
     
     // Set color values
     UIColor* salmon = [[UIColor alloc]initWithRed:254.0/255.0 green:129.0/255.0 blue:129.0/255.0 alpha:1];
-    UIColor* lavender = [[UIColor alloc] initWithRed:210.0f / 255.0f green:212.0f / 255.0f blue:220.0f / 210.0f alpha:1.0f];
     UIColor* mint = [[UIColor alloc]initWithRed:179.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1];
-    UIColor* gray = [[UIColor alloc]initWithRed:210.0/255.0 green:212.0/255.0 blue:220.0/255.0 alpha:1];
+    UIColor* mint2 = [[UIColor alloc]initWithRed:141.0/255.0 green:214.0/255.0 blue:211.0/255.0 alpha:1];
+//    UIColor* gray = [[UIColor alloc]initWithRed:210.0/255.0 green:212.0/255.0 blue:220.0/255.0 alpha:1];
+    //    UIColor* lavender = [[UIColor alloc] initWithRed:149.0f / 255.0f green:229.0f / 255.0f blue:226.0f / 210.0f alpha:1.0f];
+
     
-    if ([i.time timeIntervalSinceNow] < 0.0) {
+    if ([i.time timeIntervalSinceNow] < 0.0) { // expired
         cell.backgroundColor = salmon; // [self mixRandomColorWith:mint];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@\nCost: %@\nExpired: %@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getCost], date];
     }
     else if (indexPath.row % 2) {
-        cell.backgroundColor = lavender; // [self mixRandomColorWith:color2];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@\nCost: %@\nExpires: %@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getCost], date];
+        cell.backgroundColor = mint2; // [self mixRandomColorWith:color2];
     } else {
         cell.backgroundColor = mint; // [self mixRandomColorWith:color3];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@\nCost: %@\nExpires: %@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getCost], date];
     }
+
+//    cell.textLabel.textColor = [[UIColor alloc]initWithRed:45.0/255.0 green:84.0/255.0 blue:136.0/255.0 alpha:1];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@\n\nCost: %@\nDecide on: %@", [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getName], [[[[WishList sharedHelper] getList] objectAtIndex:indexPath.row] getCost], date];
+    
     return cell;
 }
 
