@@ -44,15 +44,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xyX-4m-EGf">
-                                <rect key="frame" x="117" y="278" width="180" height="180"/>
-                                <color key="backgroundColor" red="0.58431372549019611" green="0.89803921568627454" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="Goj-3X-YZh"/>
-                                    <constraint firstAttribute="width" secondItem="xyX-4m-EGf" secondAttribute="height" multiplier="1:1" id="JZC-6l-nEu"/>
-                                    <constraint firstAttribute="height" constant="180" id="a5T-4F-20v"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What Are You Thinking of Buying?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-4Z-8XP">
                                 <rect key="frame" x="87" y="85" width="240" height="30"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,7 +65,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGX-Vo-FPy">
-                                <rect key="frame" x="77" y="231" width="260" height="65"/>
+                                <rect key="frame" x="77" y="434" width="260" height="65"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-zV-unl">
                                         <rect key="frame" x="20" y="20" width="100" height="40"/>
@@ -119,6 +110,15 @@
                                     <constraint firstItem="dCJ-zV-unl" firstAttribute="baseline" secondItem="2kA-tC-1AW" secondAttribute="firstBaseline" id="xb9-g4-Kjd"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyX-4m-EGf">
+                                <rect key="frame" x="117" y="252" width="180" height="180"/>
+                                <color key="backgroundColor" red="0.58431372549019611" green="0.89803921568627454" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="Goj-3X-YZh"/>
+                                    <constraint firstAttribute="width" secondItem="xyX-4m-EGf" secondAttribute="height" multiplier="1:1" id="JZC-6l-nEu"/>
+                                    <constraint firstAttribute="height" constant="180" id="a5T-4F-20v"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.64313725490196083" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -128,26 +128,26 @@
                             <constraint firstItem="DGX-Vo-FPy" firstAttribute="top" secondItem="B4o-u7-5wo" secondAttribute="bottom" id="ABO-Wj-ggy"/>
                             <constraint firstItem="DGX-Vo-FPy" firstAttribute="top" secondItem="B4o-u7-5wo" secondAttribute="bottom" constant="10" id="Aip-MX-DIX"/>
                             <constraint firstAttribute="centerX" secondItem="6fb-rg-VJa" secondAttribute="centerX" id="BPF-g9-4D8"/>
-                            <constraint firstItem="xyX-4m-EGf" firstAttribute="top" secondItem="DGX-Vo-FPy" secondAttribute="bottom" id="BcT-E5-tKt"/>
                             <constraint firstAttribute="centerX" secondItem="Yh4-N9-63F" secondAttribute="centerX" id="EBt-pY-7Oz"/>
                             <constraint firstItem="xyX-4m-EGf" firstAttribute="width" secondItem="Icy-4Z-8XP" secondAttribute="width" id="IKl-Jc-4D6"/>
                             <constraint firstItem="6fb-rg-VJa" firstAttribute="width" secondItem="Icy-4Z-8XP" secondAttribute="width" id="L7e-j2-gXe"/>
-                            <constraint firstItem="DGX-Vo-FPy" firstAttribute="top" secondItem="B4o-u7-5wo" secondAttribute="bottom" constant="-15" id="LQB-4Z-kMB"/>
+                            <constraint firstItem="DGX-Vo-FPy" firstAttribute="top" secondItem="xyX-4m-EGf" secondAttribute="bottom" id="LlL-wl-UO8"/>
                             <constraint firstAttribute="bottomMargin" secondItem="xyX-4m-EGf" secondAttribute="bottom" constant="30" id="Nmf-AV-NEN"/>
                             <constraint firstItem="Icy-4Z-8XP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="Q5r-mn-HR0"/>
                             <constraint firstItem="B4o-u7-5wo" firstAttribute="top" secondItem="6fb-rg-VJa" secondAttribute="bottom" constant="-5" id="VlM-81-JJp"/>
                             <constraint firstItem="Yh4-N9-63F" firstAttribute="top" secondItem="Icy-4Z-8XP" secondAttribute="bottom" constant="10" id="WVK-MG-xYd"/>
                             <constraint firstItem="6fb-rg-VJa" firstAttribute="top" secondItem="Yh4-N9-63F" secondAttribute="bottom" constant="15" id="XPW-MF-0Ia"/>
+                            <constraint firstItem="xyX-4m-EGf" firstAttribute="top" secondItem="B4o-u7-5wo" secondAttribute="bottom" constant="10" id="n2k-iG-MDR"/>
                             <constraint firstItem="DGX-Vo-FPy" firstAttribute="top" secondItem="B4o-u7-5wo" secondAttribute="bottom" constant="5" id="nd6-CU-Ie7"/>
                             <constraint firstAttribute="centerX" secondItem="xyX-4m-EGf" secondAttribute="centerX" id="xzg-ze-DxA"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="IKl-Jc-4D6"/>
+                                <exclude reference="Nmf-AV-NEN"/>
                                 <exclude reference="ABO-Wj-ggy"/>
                                 <exclude reference="Aip-MX-DIX"/>
                                 <exclude reference="nd6-CU-Ie7"/>
-                                <exclude reference="IKl-Jc-4D6"/>
-                                <exclude reference="Nmf-AV-NEN"/>
                             </mask>
                         </variation>
                     </view>
