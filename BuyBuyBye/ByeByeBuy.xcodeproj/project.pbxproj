@@ -58,7 +58,7 @@
 		830B3B4B1A6B6B5E00889B6B /* FinalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalViewController.h; sourceTree = "<group>"; };
 		830B3B4C1A6B6B5E00889B6B /* FinalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalViewController.m; sourceTree = "<group>"; };
 		8E943BA5ECBACC548B707EC5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2A1626A1A6A258D00A65392 /* BuyBuyBye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyBuyBye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2A1626A1A6A258D00A65392 /* ByeByeBuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByeByeBuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A1626E1A6A258D00A65392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2A1626F1A6A258D00A65392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2A162711A6A258D00A65392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		B2A162751A6A258D00A65392 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B2A162781A6A258D00A65392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2A1627D1A6A258D00A65392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B2A162831A6A258D00A65392 /* BuyBuyByeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuyBuyByeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2A162831A6A258D00A65392 /* ByeByeBuyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ByeByeBuyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A162881A6A258D00A65392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2A162891A6A258D00A65392 /* BuyBuyByeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyBuyByeTests.m; sourceTree = "<group>"; };
 		B2A162CB1A6ABD0E00A65392 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 		B2A1626B1A6A258D00A65392 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2A1626A1A6A258D00A65392 /* BuyBuyBye.app */,
-				B2A162831A6A258D00A65392 /* BuyBuyByeTests.xctest */,
+				B2A1626A1A6A258D00A65392 /* ByeByeBuy.app */,
+				B2A162831A6A258D00A65392 /* ByeByeBuyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B2A162691A6A258D00A65392 /* BuyBuyBye */ = {
+		B2A162691A6A258D00A65392 /* ByeByeBuy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2A1628D1A6A258D00A65392 /* Build configuration list for PBXNativeTarget "BuyBuyBye" */;
+			buildConfigurationList = B2A1628D1A6A258D00A65392 /* Build configuration list for PBXNativeTarget "ByeByeBuy" */;
 			buildPhases = (
 				9600DBAC5F05EF98B234B1CA /* Check Pods Manifest.lock */,
 				B2A162661A6A258D00A65392 /* Sources */,
@@ -214,14 +214,14 @@
 			);
 			dependencies = (
 			);
-			name = BuyBuyBye;
+			name = ByeByeBuy;
 			productName = BuyBuyBye;
-			productReference = B2A1626A1A6A258D00A65392 /* BuyBuyBye.app */;
+			productReference = B2A1626A1A6A258D00A65392 /* ByeByeBuy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B2A162821A6A258D00A65392 /* BuyBuyByeTests */ = {
+		B2A162821A6A258D00A65392 /* ByeByeBuyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2A162901A6A258D00A65392 /* Build configuration list for PBXNativeTarget "BuyBuyByeTests" */;
+			buildConfigurationList = B2A162901A6A258D00A65392 /* Build configuration list for PBXNativeTarget "ByeByeBuyTests" */;
 			buildPhases = (
 				B2A1627F1A6A258D00A65392 /* Sources */,
 				B2A162801A6A258D00A65392 /* Frameworks */,
@@ -232,9 +232,9 @@
 			dependencies = (
 				B2A162851A6A258D00A65392 /* PBXTargetDependency */,
 			);
-			name = BuyBuyByeTests;
+			name = ByeByeBuyTests;
 			productName = BuyBuyByeTests;
-			productReference = B2A162831A6A258D00A65392 /* BuyBuyByeTests.xctest */;
+			productReference = B2A162831A6A258D00A65392 /* ByeByeBuyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -257,7 +257,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B2A162651A6A258D00A65392 /* Build configuration list for PBXProject "BuyBuyBye" */;
+			buildConfigurationList = B2A162651A6A258D00A65392 /* Build configuration list for PBXProject "ByeByeBuy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -270,8 +270,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B2A162691A6A258D00A65392 /* BuyBuyBye */,
-				B2A162821A6A258D00A65392 /* BuyBuyByeTests */,
+				B2A162691A6A258D00A65392 /* ByeByeBuy */,
+				B2A162821A6A258D00A65392 /* ByeByeBuyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -363,7 +363,7 @@
 /* Begin PBXTargetDependency section */
 		B2A162851A6A258D00A65392 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B2A162691A6A258D00A65392 /* BuyBuyBye */;
+			target = B2A162691A6A258D00A65392 /* ByeByeBuy */;
 			targetProxy = B2A162841A6A258D00A65392 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -469,15 +469,15 @@
 			baseConfigurationReference = 485F22C014E41740EC3193BC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nina Baculinao (989BQC9KYV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nina Baculinao (989BQC9KYV)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = BuyBuyBye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = BuyBuyBye;
+				PRODUCT_NAME = ByeByeBuy;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -488,15 +488,15 @@
 			baseConfigurationReference = 1D93E7CEF513E52773B8A8C7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nina Baculinao (989BQC9KYV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nina Baculinao (989BQC9KYV)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = BuyBuyBye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = BuyBuyBye;
+				PRODUCT_NAME = ByeByeBuy;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -505,7 +505,6 @@
 		B2A162911A6A258D00A65392 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -516,30 +515,29 @@
 				);
 				INFOPLIST_FILE = BuyBuyByeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = BuyBuyByeTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuyBuyBye.app/BuyBuyBye";
+				PRODUCT_NAME = ByeByeBuyTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ByeByeBuy.app/ByeByeBuy";
 			};
 			name = Debug;
 		};
 		B2A162921A6A258D00A65392 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = BuyBuyByeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = BuyBuyByeTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuyBuyBye.app/BuyBuyBye";
+				PRODUCT_NAME = ByeByeBuyTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ByeByeBuy.app/ByeByeBuy";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B2A162651A6A258D00A65392 /* Build configuration list for PBXProject "BuyBuyBye" */ = {
+		B2A162651A6A258D00A65392 /* Build configuration list for PBXProject "ByeByeBuy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2A1628B1A6A258D00A65392 /* Debug */,
@@ -548,7 +546,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2A1628D1A6A258D00A65392 /* Build configuration list for PBXNativeTarget "BuyBuyBye" */ = {
+		B2A1628D1A6A258D00A65392 /* Build configuration list for PBXNativeTarget "ByeByeBuy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2A1628E1A6A258D00A65392 /* Debug */,
@@ -557,7 +555,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2A162901A6A258D00A65392 /* Build configuration list for PBXNativeTarget "BuyBuyByeTests" */ = {
+		B2A162901A6A258D00A65392 /* Build configuration list for PBXNativeTarget "ByeByeBuyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2A162911A6A258D00A65392 /* Debug */,
